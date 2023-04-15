@@ -1,6 +1,9 @@
 /* Make proper LLD Class diagram for this Code.  */
 
 
+// Write only high level classes in interviews.
+
+
 // make as many objects as possilbe so decoulpe system
 // make as many classes as possible for decouple system.
 
@@ -31,7 +34,7 @@ class Book {
 	List<Author> authors;
 	BookType bookType;
 }
-// book item is relate to the3 library, bookitem is library thing
+// book item is relate to the library, bookitem is library thing
 // create a book 
 // then we have to make 10 copies of same book. bok bok  = new book    book item()book.name,bacoe everything.
 class BookItem extends Book {
@@ -167,10 +170,3 @@ class Fine {
 
 	public double calculateFine(int days);
 }
-
-
-
-
-
-
-

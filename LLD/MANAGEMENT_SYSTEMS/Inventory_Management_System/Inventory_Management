@@ -1,0 +1,153 @@
+// add product controller and controller for each class, 
+// for decoupleness
+// use strategy pattern for every algo.
+// Whole inventory system filled with static methods, so it is singleton now.
+public class InventoryManagement{
+    ProductController productController;
+    static Map<Location, Unit>  locationMap = new Hashmap<>(); 
+    // which product exist in that location.
+    public static void addProduct(Product product){ 
+        productController.add(Product);
+    }
+
+    public static Product getProduct(String productId){
+        return productController.getProduct(productId)
+    }
+
+    public static placeUnit(Unit unit){
+        // algo for placingUnit that can be separate using strategy pattern
+        // checking location size and all things, Algo will do.
+        for(Map.Entry<Location, Unit> entry: LocationMap.entrySet()){
+            if(entry.getValue() == null){
+                //Lock on a location.
+                unit.locationId = entry.getKey().id;
+                // Release a lock after 
+            }
+        }
+    }
+
+    public static removeUnit(Product product){
+
+        // Algo separate implementation.
+    
+        for(Map.Entry<Location, Unit> entry: LocationMap.entrySet()){
+                            // lock key
+            if(entry.getValue() != null && product.id == entry.getValue().productId){
+                location.remove(entry.getKey());
+            }
+                            // release lock
+        }
+    }
+
+    public static Map<Location, Unit> getShelvesStatus(){
+        return locationMap;
+    }
+
+    public static void updateStatus(Unit unit, Status status){
+        // business logic.
+        unit.status = status
+    }
+
+
+
+    public void report(){
+        // push into queue for daily report.
+    }
+
+
+}
+
+
+
+
+class ProductController{
+    //  List<Product> products;
+     Map<String, Product> productMap = new Hashmap<>();// this put into product controller.
+     ProductAddingSimpleStrategy productAddingSimpleStrategy;
+    public ProductController(product, productAddingSimpleStrategy){
+        this.product = products;
+        this.productAddingSimpleStrategy = productAddingSimpleStrategy
+    }
+    // Do crud operations on the product
+    public static void addProduct(Product product){ 
+        productMap.put(product.id, product);
+    }
+    //add product
+    public static Product getProduct(String productId){
+        return productMap.get(productId);
+    }
+
+
+    
+    // remove product
+    // edit product
+
+
+}
+
+class ProductAddingSimpleStrategy{
+
+}
+class SimpleStrategy extends ProductAddingSimpleStrategy{
+
+}
+
+class SmartStrategy extends ProductAddingSimpleStrategy{
+    
+}
+
+class User{
+    InventorySystem inventorySystem;
+
+    public void addProduct(){
+        // algo iplementation will be on the strategy pattern.
+        InventoryManagement.addProduct(new Product("id",0,"",0,Size.L))
+    }
+
+    public void executeOrder(Order order){
+        for(map.Entry<> item : order.productCount.entrySet()){
+            for(int i=0;i<item.getvalue;i++){
+                InventoryManagement.removeUnit(item.getKey())
+            }
+        }
+    }
+}
+
+class Location{
+    String id;
+    Size type;
+}
+
+
+enum Status{
+    INVENTORY, TRANSIT, DELIVERY
+}
+
+class Unit{
+    Strind id;
+    String productId;
+    String locationId;
+    Status status;
+}
+
+class Product{
+    String id;
+    Double price;
+    String description;
+    double weight;
+    Size size;
+    // List<Units> unit.   we can have unit controller.
+
+    Product(String id, Double Price, String description, double weight, Size size){
+        // do initilization.
+    }
+}
+
+enum Size{
+    S,M,L
+}
+
+class Order{
+    Map<Product, Interger> productCount = new Hashmap<>();// {product, count}
+
+}
