@@ -1,8 +1,9 @@
+package JAVA;
 
 import java.util.*;
 import java.io.*;
 
-public class practice {
+public class cp {
 
     static long startTime = System.currentTimeMillis();
 
@@ -28,32 +29,8 @@ public class practice {
             while (testcases-- > 0) {
 
                 int n = r.ni();
-                if(n%2==0){
-                    out.write(("No").getBytes());
-                    out.write(("\n").getBytes());
-                }
-                else{
-                    out.write(("Yes").getBytes());
-                    out.write(("\n").getBytes());
-                    n*=2;
-                    int i=n;
-                    int j=1;
-                    while(j<=n/2){
-                        out.write((i+" ").getBytes());
-                        out.write((j+"").getBytes());
-                        out.write(("\n").getBytes());
-                        i--;
-                        j+=2;
-                    }
-                    j=2;
-                    while(j<i){
-                        out.write((i+" ").getBytes());
-                        out.write((j+"").getBytes());
-                        out.write(("\n").getBytes());
-                        j+=2;
-                        --i;
-                    }
-                }
+                System.out.println("sdf");
+
 
             }
             // Solution Ends Here

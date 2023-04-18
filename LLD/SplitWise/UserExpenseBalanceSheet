@@ -2,11 +2,13 @@
 public class UserExpenseBalanceSheet {
 
     Map<String, Balance> userVsBalance;// friends and their total ows and getBacks.
+    
     double totalYourExpense;
 
     double totalPayment;
 
     double totalYouOwe;
+
     double totalYouGetBack;
 
     public UserExpenseBalanceSheet(){
