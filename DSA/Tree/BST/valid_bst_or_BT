@@ -1,0 +1,14 @@
+class Solution {
+public:
+    bool valid(TreeNode* root,long long mi,long long mx)
+    {
+    if(root==NULL)return true;
+    return ((root->val>mi && root->val<mx) 
+    && (valid(root->left,mi,root->val) 
+    && valid(root->right,root->val,mx)));// if all are valid.
+    }
+    bool isValidBST(TreeNode* root) {
+        return valid(root,INT_MNIN,INT_MAX);
+        
+    }
+};
