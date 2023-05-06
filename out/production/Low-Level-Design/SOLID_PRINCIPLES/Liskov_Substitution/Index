@@ -1,0 +1,88 @@
+violations:
+
+
+
+
+
+
+
+solutions:
+1. A subtype doesn't automatically become substitutable for its supertype. To be substitutable, the subtype must behave like its supertype.
+2. An object's behavior is the contract that its clients can rely on. The behavior is specified by the public methods, any constraints placed on their inputs, any state changes that the object goes through, and the side effects from the execution of methods.
+3. This principle tell you , how to inherit properly.
+4. if a function takes a instance of a class. that same function shoudl also be able to take the instance of the derived class from that class.
+5. However, behavioral subtyping means that not only does a subtype provide all of the methods in the supertype,
+but it must adhere to the behavioral specification of the supertype.
+This ensures that any assumptions made by the clients about the supertype behavior are met by the subtype.
+
+
+
+
+
+
+rules for substitution: 
+
+1. Signature Rule – Return Types 
+///   if supertype returns Number,,,      then subtype must returns int, interger , long, not a character.
+2. Signature Rule – Exceptions   
+// if there are known exceptions that supertype is throwing , subtype must not develop any new exception....,
+(State is changed in subtype if subtype showing new type of exceptions)
+3. Properties Rule – Class Invariants
+A class invariant is an assertion concerning object properties that must be true for all valid states of the object.
+
+ example :     // postcondition: speed < limit
+ if this condition is there in supertype, then this folllows by all inheriting classes.
+4. Properties Rule – History Constraint
+The history constraint states that the subclass methods (inherited or new) shouldn't allow state changes that the base class didn't allow.
+
+example : 
+// Allowed to be set once at the time of creation.
+    // Value can only increment thereafter.
+    // Value cannot be reset.
+    protected int mileage;
+
+    public Car(int mileage) {
+        this.mileage = mileage;
+    }
+
+// subtype must folllow all the comments that written there in above.....
+
+5. Methods Rule – Preconditions
+A precondition should be satisfied before a method can be executed. Let's look at an example of a precondition concerning parameter values:
+
+public void doStuff(int num) {
+        if (num <= 0 || num > 5) {
+            throw new IllegalArgumentException("Input out of range 1-5");
+        }
+        // some logic here...
+    }
+
+// if in subtype, we increase these conditions, that is bad practice.,..... 
+
+6. Methods Rule – PostConditions
+A postcondition is a condition that should be met after a method is executed.
+
+
+
+
+
+Good Practice : 
+1.
+
+SuperType{
+//    Write here the things that subtype must follow. because client will make an assumption of subtype by seeing their supertype.
+}
+
+
+subtype_1 extends Supertype{
+
+}
+
+subtype_2 extends Supertype{
+
+}
+subtype_3 extends Supertype{
+
+}
+links:
+https://www.baeldung.com/java-liskov-substitution-principle#:~:text=The%20Liskov%20Substitution%20Principle%20helps,follow%20the%20Open%2FClosed%20principle

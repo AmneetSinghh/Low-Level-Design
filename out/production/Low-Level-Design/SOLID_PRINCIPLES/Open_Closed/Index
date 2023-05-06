@@ -1,0 +1,18 @@
+violations:
+1. lots of if/else or switch statements 
+2. if we have some generic class that is glocal to application, but we are changing it for our usecase. So we are changing the already tested class. Another violation of open closed principle. Either in this case, we can expend the class.
+
+
+
+
+
+solutions: 
+1. Use inheritance to achieve this goal, and the child classes with different functionality but same behavior implement the interface.
+2. we use interfaces for OC principle, because interfaces are closed for modification.
+3. We should strive to write code that doesn't have to be changed every time the requirements change.
+4. Constructor Injection is the best example of open-closed principle.    (Strategy pattern)
+
+
+links : 
+//https://www.youtube.com/watch?v=-ptMtJAdj40      ( lots of if else )
+//https://github.com/learnasyougo/S.O.L.I.D#single-responsibility-principle    (lots of if else)

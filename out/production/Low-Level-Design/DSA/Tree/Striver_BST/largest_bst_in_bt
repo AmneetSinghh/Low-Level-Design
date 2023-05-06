@@ -1,0 +1,29 @@
+// largest bst in a binary tree.
+
+class nodevalue{
+    public :
+    int maxNode, minNode, maxBST;
+    nodeValue(minNode, maxNode,maxBST ){
+        this.maxNode = maxNode
+        this.minNode = minnode
+        this.maxBST = maxBST;
+    }
+}
+
+
+class solution{
+    private:
+    nodevalue largestBST(node root){
+        if(!root){
+            return nodevalue(INT_MAX,INT_MIN,0);
+        }
+        auto left = largestBst(root->left);
+        auto right = largestBst(root->right);
+        // make sum variable as well.
+        // for finding maximum sum bst in a binary tre
+        if(left.maxNode < root->val && root->val < right.minNode){
+            return nodevalue(max(root->val,left.minNode, min(root->val,right.maxNode),left.maxBST+right.maxBST+1));
+        }
+    }
+    return nodevalue(INT_MIN,INT_MAX, max(left.maxBST,right.maxBST));
+}

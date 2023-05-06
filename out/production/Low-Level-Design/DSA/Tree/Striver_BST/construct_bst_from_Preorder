@@ -1,0 +1,12 @@
+// given array is the preordcer.
+
+// we not need the minimum condition because the preorder is actuallly build from the BST.
+node build(vector<int> &a,int &i, int bound){
+    if(i== a.size() and a[i]>bound) return null;
+    node root = new root(a[i++]);
+    root->left = build(a,i,root->val);// bound for left.
+    root->right = build(a,i,bound);
+    return root;
+}
+
+// we just used the bst property. left <root and right> root.

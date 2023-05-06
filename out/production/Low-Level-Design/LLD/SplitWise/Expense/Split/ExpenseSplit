@@ -1,0 +1,6 @@
+
+public interface ExpenseSplit {
+
+    public void validateSplitRequest(List<Split> splitList, double totalAmount);
+    // here we can have compute amount as well if the splits that we get has not split just total amount and friends infol;
+}
