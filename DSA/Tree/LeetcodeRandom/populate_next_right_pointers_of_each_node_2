@@ -1,0 +1,37 @@
+// now we have a skewed tree,not a perfect tree.
+
+
+// constant space solution.
+
+// constant space solution.
+
+class Solution {
+    public:
+        Node* connect(Node* root) {
+            if(root == NULL){
+                return root;
+            }
+            Node* current = root;
+            Node* head = root;
+            Node* dummy = new Node(-1);
+            while(head){
+                Node* prev = dummy;
+                current = head;
+                while(current){
+                    if(current->left){
+                        prev->next = current->left;
+                        prev = prev->next;
+                    }
+                    if(current->right){
+                        prev->next = current->right;
+                        prev = prev->next;
+                    }
+                    current = current->next;
+                }
+                head = dummy->next;// starting value for next level.
+                dummy->next = NULL;// again start from left.
+            }
+            return root;
+    
+        }
+    };

@@ -1,0 +1,21 @@
+class Solution {
+public:
+    int dfs(TreeNode* root)
+    {
+     if(root==NULL)return 0;
+     // for skewed tree , NOT min, because min will be zero.
+     if(root->left == NULL){
+         return 1 + dfs(root->right);
+     }
+     if(root->right == NULL){
+         return 1 + dfs(root->left);
+     }
+     return 1+min(dfs(root->left),dfs(root->right));
+    }
+    int minDepth(TreeNode* root) {
+        int val=dfs(root);
+        return val;
+    }
+};
+
+// minimum depth of the binary tree.
