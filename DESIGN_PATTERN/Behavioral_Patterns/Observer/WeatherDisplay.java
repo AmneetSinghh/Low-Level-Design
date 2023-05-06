@@ -1,9 +1,9 @@
-package DESIGN_PATTERN.Behavioral_Patterns;
+package DESIGN_PATTERN.Behavioral_Patterns.Observer;
 import java.util.ArrayList;
 import java.util.List;
 
 // Example of observer pattern.
-public class observer_pattern {
+public class WeatherDisplay {
     public static void main(String args[]){
         WeatherStation weatherStation = new WeatherStation();
         weatherStation.WeatherChanged();
@@ -26,6 +26,7 @@ interface Subject{
     public void notifyObserver();
     public void removeObserver(Observer o);
 }
+
 interface Observer{
     public void update();
 }
