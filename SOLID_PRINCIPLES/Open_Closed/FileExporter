@@ -19,7 +19,7 @@ public class FileExporter {
 // lots of if else.
 
 // used OC principle.
-
+//
 interface IPersonFormatter<TReturnValue> {
     TReturnValue Format(Person person, string? location);
 }
