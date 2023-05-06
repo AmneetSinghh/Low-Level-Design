@@ -1,0 +1,53 @@
+public class FileExporter {
+    public object Export(string format, string? location = null) {
+        switch(format) {
+            case "Excel":
+                // excel specific rendering and saving to location here
+                excel.Save(location);
+                break;
+            case "JSON":
+                // json specific rendering and then returning that data as a result of our method/function
+                return jsonString;
+                break;
+            default:
+                // default behaviour here, saving it in a text file
+                File.WriteAllText(location.Value, $"{FirstName} {LastName}, born on {DateOfBirth.ToShortDateString()} as {Gender}.");
+        }
+    }
+}
+
+// lots of if else.
+
+// used OC principle.
+
+interface IPersonFormatter<TReturnValue> {
+    TReturnValue Format(Person person, string? location);
+}
+
+public class JSONPersonFormatter : IPersonFormatter<string> {
+    public string Format(Person person, string? location) {
+        // ignoring location and executing json formatting logic
+        return jsonString;
+    }
+}
+
+public class XMLPersonFormatter : IPersonFormatter<string> {
+    public string Format(Person person, string? location) {
+        // ignoring location and executing xml formatting logic
+        return xmlString;
+    }
+}
+
+public class ExcelPersonFormatter : IPersonFormatter<object> {
+    public object Format(Person person, string? location) {
+        // excel specific rendering and saving to location here        
+        excel.Save(location);
+        // we return null, as we don't have anything to return...
+        return null;
+    }
+}
+public class PersonExporter {
+    public object Export(Person person, IPersonFormatter formatter, string? location) {        
+        return formatter.Format(person, location);// abstraction we don't know, what formatter it is. just passs it dynamically.
+    }
+}

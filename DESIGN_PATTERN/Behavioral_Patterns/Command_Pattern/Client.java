@@ -1,12 +1,12 @@
-package DESIGN_PATTERN.Command_Pattern;
+package DESIGN_PATTERN.Behavioral_Patterns.Command_Pattern;
 import java.rmi.Remote;
 
-import DESIGN_PATTERN.Command_Pattern.Command.Command;
-import DESIGN_PATTERN.Command_Pattern.ConcreteCommand.*;
-import DESIGN_PATTERN.Command_Pattern.Invoker.RemoteControl;
-import DESIGN_PATTERN.Command_Pattern.Receiver.CeilingFan;
-import DESIGN_PATTERN.Command_Pattern.Receiver.Light;
-import DESIGN_PATTERN.Command_Pattern.Receiver.Sterio;
+import DESIGN_PATTERN.Behavioral_Patterns.Command_Pattern.Command.Command;
+import DESIGN_PATTERN.Behavioral_Patterns.Command_Pattern.ConcreteCommand.*;
+import DESIGN_PATTERN.Behavioral_Patterns.Command_Pattern.Invoker.RemoteControl;
+import DESIGN_PATTERN.Behavioral_Patterns.Command_Pattern.Receiver.CeilingFan;
+import DESIGN_PATTERN.Behavioral_Patterns.Command_Pattern.Receiver.Light;
+import DESIGN_PATTERN.Behavioral_Patterns.Command_Pattern.Receiver.Sterio;
 
 public class Client {
 

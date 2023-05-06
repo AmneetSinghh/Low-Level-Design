@@ -1,4 +1,4 @@
-package DESIGN_PATTERN.Command_Pattern.Receiver;
+package DESIGN_PATTERN.Behavioral_Patterns.Command_Pattern.Receiver;
 
 // Main objects that person the action.
 public class CeilingFan {

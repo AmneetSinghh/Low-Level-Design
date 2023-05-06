@@ -1,4 +1,4 @@
-package DESIGN_PATTERN.ChainOfResponsibilityDesignPattern;
+package DESIGN_PATTERN.Behavioral_Patterns.ChainOfResponsibilityDesignPattern;
 
 public class ErrorLogProcessor extends LogProcessor{
     public ErrorLogProcessor(LogProcessor nextLogProcessor) {

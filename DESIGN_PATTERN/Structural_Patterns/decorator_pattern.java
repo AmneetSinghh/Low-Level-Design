@@ -1,4 +1,4 @@
-package DESIGN_PATTERN;
+package DESIGN_PATTERN.Structural_Patterns;
 import javax.swing.*;
 
 // so as we can see decorator pattern, adding some new responsibilites/functionlaties to the excisting code at runtime by object composition.

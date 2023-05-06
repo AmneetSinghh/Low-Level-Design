@@ -1,13 +1,15 @@
-package SOLID_PRINCIPLES;
+package SOLID_PRINCIPLES.Single_Responsibility;
 import java.util.Arrays;
 
-public class Single_responsibility_principle {
+public class TextManipulatorAndPrinterRunner {
     public static void main(String[] args) {
 
         System.out.println("******   Single responsibility principle     ******");
 
     }
 }
+
+// each class servers only one responsibility and only one reason to change the classs
 //https://www.baeldung.com/java-single-responsibility-principle
 //Here we have two responsibilities: manipulating and printing the text.
 class TextManipulator {

@@ -1,7 +1,7 @@
-package DESIGN_PATTERN.Command_Pattern.ConcreteCommand;
+package DESIGN_PATTERN.Behavioral_Patterns.Command_Pattern.ConcreteCommand;
 
-import DESIGN_PATTERN.Command_Pattern.Command.Command;
-import DESIGN_PATTERN.Command_Pattern.Receiver.Light;
+import DESIGN_PATTERN.Behavioral_Patterns.Command_Pattern.Command.Command;
+import DESIGN_PATTERN.Behavioral_Patterns.Command_Pattern.Receiver.Light;
 
 public class LightOffCommand implements Command {
     Light light;

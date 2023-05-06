@@ -1,4 +1,4 @@
-package DESIGN_PATTERN.abstract_factory_pattern;
+package DESIGN_PATTERN.Creational_Patterns.abstract_factory_pattern;
 
 public class abstract_factory_method {
 }
