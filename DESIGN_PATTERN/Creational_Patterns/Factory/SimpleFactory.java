@@ -1,7 +1,7 @@
 package DESIGN_PATTERN.Creational_Patterns.Factory;
 
 // EXAMPLE OF FACTORY METHOD.
-public class factory_method {
+public class SimpleFactory {
     public static void main(String args[]){
         ButtonFactory factory = new ButtonFactory();// we will pass factory from the constructor injection so that we not create concrete object here.
         Button myButton = factory.getButton("First");
@@ -38,6 +38,7 @@ class ThirdButton implements  Button{
     }
 }
 
+// we can pass the arguments.
 class ButtonFactory{
     Button getButton(String type){
         if(type.equals("First")){

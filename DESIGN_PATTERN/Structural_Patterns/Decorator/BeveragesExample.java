@@ -1,16 +1,16 @@
-package DESIGN_PATTERN.Structural_Patterns;
-import javax.swing.*;
+package DESIGN_PATTERN.Structural_Patterns.Decorator;
 
 // so as we can see decorator pattern, adding some new responsibilites/functionlaties to the excisting code at runtime by object composition.
-public class decorator_pattern {
+public class BeveragesExample {
     public static void main(String args[]){
         Beverages coffee_1 = new Coffee_1();// we create a beverage.
 //        System.out.println("First -> "+ coffee_1.getDescription());
 
         // now decorate it with milk
-        coffee_1 = new Milk(coffee_1);
-        coffee_1.setSize(Beverages.Size.LONG);
-        System.out.println("size   -> "+ coffee_1.getSize());
+//        coffee_1 = new Milk(coffee_1);
+//        coffee_1.setSize(Beverages.Size.LONG);
+////        Beverages.Size s =  coffee_1.getSize();
+//        System.out.println(s);
 
 //        System.out.println("Second  -> "+ coffee_1.getDescription());
 
@@ -22,7 +22,7 @@ public class decorator_pattern {
 
 
         coffee_1 = new Milk(coffee_1);
-//        System.out.println("Fifth -> "+ coffee_1.getDescription());
+        System.out.println("Fifth -> "+ coffee_1.getDescription());
     }
 }
 
@@ -81,7 +81,7 @@ class Coffee_2 extends Beverages {
 // decorator class
 abstract class ContimenentDecorator extends Beverages {
     Beverages beverages;
-    public abstract String getDescription();
+    public abstract String getDescription();// each decorator will add its description.
 
     public Size getSize(){
         System.out.println("Contimenent Decorator size");

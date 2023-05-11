@@ -1,4 +1,4 @@
-package DESIGN_PATTERN.Behavioral_Patterns.ChainOfResponsibility;
+package DESIGN_PATTERN.Behavioral_Patterns.Chain_Of_Responsibility;
 
 //https://www.oreilly.com/library/view/learning-java-4th/9781449372477/ch06s01.html#:~:text=A%20class%20in%20Java%20can,%7B%20float%20weight%20%3B%20...
 // we are using the shadow variables, so info log processor have proper instance of log processor, it means, it has its own log processor all its methods and variables.
