@@ -1,0 +1,8 @@
+
+
+Important points:
+1. used object composition to wrap the adaptee with an altered interface. Advantage we can pass any subclass of an adaptee
+2. pattern binds client to an interface not an implementation, we can use several adapters to bind different duck implementations to
+different tuckey ducks. So client never knows we are using new interface example turkey duck.
+3. convert one interface to another.
+4. When new interface isn't compatable with your code, Make use of adapter pattern.
