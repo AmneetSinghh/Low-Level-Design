@@ -1,0 +1,19 @@
+
+
+
+
+Important points:
+1. Makes an interface simpler.
+2. facade doesn't really encapsulates the subsystems classes; they merely provides a simplified interface to their functionality. You can still use subsystems classes if you want to use.
+3. the facade also allows you to decouple your client implementation from any one subsystems. So if you change subsystems, like adding new homethreater implementing new interfaces,     then the client code not need to change
+because they  just use the facade. not the actual subsystems.
+
+4. So we have a very complex code with different set of algorithms and complex classes. But  when we need to expose the system,
+we have to expose only simpler version that is called as facade. Very simplified version, so that client code proper decouple from your complex subsystems.
+
+5. Use the Facade when you want to structure a subsystem into layers.
+
+6  Create facades to define entry points to each level of a subsystem. You can reduce coupling between multiple subsystems
+by requiring them to communicate only through facades.
+
+example : In phonepe we only expose simple interfaces to outer world, who can use our code. VERY LESS DEPENDENCY.
