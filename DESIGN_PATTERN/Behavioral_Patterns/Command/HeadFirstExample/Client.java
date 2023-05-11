@@ -1,17 +1,17 @@
-package DESIGN_PATTERN.Behavioral_Patterns.Command;
-import java.rmi.Remote;
+package DESIGN_PATTERN.Behavioral_Patterns.Command.HeadFirstExample;
 
-import DESIGN_PATTERN.Behavioral_Patterns.Command.Command.Command;
-import DESIGN_PATTERN.Behavioral_Patterns.Command.ConcreteCommand.*;
-import DESIGN_PATTERN.Behavioral_Patterns.Command.Invoker.RemoteControl;
-import DESIGN_PATTERN.Behavioral_Patterns.Command.Receiver.CeilingFan;
-import DESIGN_PATTERN.Behavioral_Patterns.Command.Receiver.Light;
-import DESIGN_PATTERN.Behavioral_Patterns.Command.Receiver.Sterio;
+import DESIGN_PATTERN.Behavioral_Patterns.Command.HeadFirstExample.Command.Command;
+import DESIGN_PATTERN.Behavioral_Patterns.Command.HeadFirstExample.ConcreteCommand.*;
+import DESIGN_PATTERN.Behavioral_Patterns.Command.HeadFirstExample.Invoker.RemoteControl;
+import DESIGN_PATTERN.Behavioral_Patterns.Command.HeadFirstExample.Receiver.CeilingFan;
+import DESIGN_PATTERN.Behavioral_Patterns.Command.HeadFirstExample.Receiver.Light;
+import DESIGN_PATTERN.Behavioral_Patterns.Command.HeadFirstExample.Receiver.Sterio;
 
 public class Client {
 
     public static void main(String args[]){
         RemoteControl remoteControl = new RemoteControl();// this is the invoker.
+        // client and invoker just knows that command implements the execuate method, thats it. he knows nothing about implementation.
         Light light = new Light();
         Sterio sterio = new Sterio();
         CeilingFan ceilingFan = new CeilingFan();
@@ -56,7 +56,5 @@ public class Client {
         remoteControl.undoButtonWasPressed();
 
     }
-
-
 
 }

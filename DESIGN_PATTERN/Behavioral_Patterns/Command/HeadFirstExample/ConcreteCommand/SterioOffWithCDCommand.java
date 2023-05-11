@@ -1,7 +1,7 @@
-package DESIGN_PATTERN.Behavioral_Patterns.Command.ConcreteCommand;
+package DESIGN_PATTERN.Behavioral_Patterns.Command.HeadFirstExample.ConcreteCommand;
 
-import DESIGN_PATTERN.Behavioral_Patterns.Command.Command.Command;
-import DESIGN_PATTERN.Behavioral_Patterns.Command.Receiver.Sterio;
+import DESIGN_PATTERN.Behavioral_Patterns.Command.HeadFirstExample.Command.Command;
+import DESIGN_PATTERN.Behavioral_Patterns.Command.HeadFirstExample.Receiver.Sterio;
 
 public class SterioOffWithCDCommand implements Command {
     Sterio sterio;

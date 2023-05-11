@@ -1,9 +1,7 @@
-package DESIGN_PATTERN.Behavioral_Patterns.Command.ConcreteCommand;
+package DESIGN_PATTERN.Behavioral_Patterns.Command.HeadFirstExample.ConcreteCommand;
 
-import java.util.List;
-
-import DESIGN_PATTERN.Behavioral_Patterns.Command.Command.Command;
-import DESIGN_PATTERN.Behavioral_Patterns.Command.Receiver.Light;
+import DESIGN_PATTERN.Behavioral_Patterns.Command.HeadFirstExample.Command.Command;
+import DESIGN_PATTERN.Behavioral_Patterns.Command.HeadFirstExample.Receiver.Light;
 
 public class LightOnCommand implements Command {
     Light light;

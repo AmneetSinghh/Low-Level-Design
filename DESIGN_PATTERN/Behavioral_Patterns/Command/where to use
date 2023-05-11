@@ -1,0 +1,28 @@
+* encapsulating method invocation
+1. When we call a concrete method, we decouple the code. so we need to encapsulate it. we do that using command pattern.
+2.  The Command pattern can turn a specific method call into a stand-alone object.
+This change opens up a lot of interesting uses: you can pass commands as method arguments,
+store them inside other objects, switch linked commands at runtime, etc.
+
+
+
+
+
+
+applications :
+1. Runnable interface in java are implemented using command pattern.2
+2. in queeues or task schedulers we can pass standalone objects as commands, then jobScheduler will execute them asynchronously.
+job queeu just know he need to call execute method, thats it , proper encapsulatino and abstraction.
+3. for database recovery,
+command{
+ execuate();
+ undo();
+ store();// save in file.
+ load() // get from file.
+ }
+
+
+ 4. Command is a behavioral design pattern that turns a request into a stand-alone object that contains all information about the request.
+  This transformation lets you pass requests as a method arguments,
+  delay or queue a request’s execution, and support undoable operations.
+

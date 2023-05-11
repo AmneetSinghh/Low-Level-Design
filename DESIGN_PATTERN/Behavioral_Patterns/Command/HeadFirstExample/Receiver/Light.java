@@ -1,4 +1,4 @@
-package DESIGN_PATTERN.Behavioral_Patterns.Command.Receiver;
+package DESIGN_PATTERN.Behavioral_Patterns.Command.HeadFirstExample.Receiver;
 
 public class Light {
         public void off(){
