@@ -4,14 +4,14 @@ package DESIGN_PATTERN.Behavioral_Patterns.Chain_Of_Responsibility;
 // we are using the shadow variables, so info log processor have proper instance of log processor, it means, it has its own log processor all its methods and variables.
 public class Main {
     public static void main(String args[]){
-        // its a chain of responsibilities.
-        LogProcessor logger = new InfoLogProcessor(
-                    new DebugLogProcessor(
-                            new ErrorLogProcessor(
+        // it's a chain of responsibilities.
+        LogProcessor logger = new InfoLogProcessor(   // level - 1 check
+                    new DebugLogProcessor( // level - 2 check
+                            new ErrorLogProcessor(  // level - 3 check
                                     null)));
 
 
-        logger.log(LogProcessor.ERROR, "exception happens");
+//        logger.log(LogProcessor.ERROR, "exception happens");
 //        logger.log(LogProcessor.DEBUG, "need to debug this ");
 //        logger.log(LogProcessor.LogProcessorINFO, "just for info ");
     }

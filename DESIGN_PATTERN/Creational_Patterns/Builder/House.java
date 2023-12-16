@@ -8,6 +8,8 @@ public class House {
     String tablet;
     String monitor;
     String phone;
+
+    static int value;
     private House(HouseBuilder builder){
         this.roof = builder.roof;
         this.walls = builder.walls;
@@ -18,6 +20,10 @@ public class House {
         this.phone = builder.phone;
     }
 
+    /*
+     * We use static inner class bcz it doesn't access instance members of object class
+     * we use remove static, we need to create the object of house class, for getting HouseBuilder class, we don't want object creation.
+     */
     public static class HouseBuilder{
         private String roof;
         private String walls;
@@ -63,7 +69,8 @@ public class House {
         }
 
         public House build(){
-            return new House(this);
+            House house =  new House(this);
+            return house;
         }
     }
 }

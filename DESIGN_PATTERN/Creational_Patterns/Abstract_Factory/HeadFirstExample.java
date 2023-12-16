@@ -35,12 +35,12 @@ class NyStylePizzaIngredientFactory implements PizzaIngredientsFactory{
 class ChicagoStylePizzaIngredientFactory implements PizzaIngredientsFactory{
     @Override
     public Dough createDough() {
-        return null;
+        return new ChicagoDough();
     }
 
     @Override
     public Sauce createSauce() {
-        return null;
+        return new ChicagoSauce();
     }
 
     /// more products. family of products.

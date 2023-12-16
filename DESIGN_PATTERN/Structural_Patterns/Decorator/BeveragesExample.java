@@ -5,11 +5,10 @@ public class BeveragesExample {
     public static void main(String args[]){
         Beverages coffee_1 = new Coffee_1();// we create a beverage.
 //        System.out.println("First -> "+ coffee_1.getDescription());
-
-        // now decorate it with milk
+//        now decorate it with milk
 //        coffee_1 = new Milk(coffee_1);
 //        coffee_1.setSize(Beverages.Size.LONG);
-////        Beverages.Size s =  coffee_1.getSize();
+//        Beverages.Size s =  coffee_1.getSize();
 //        System.out.println(s);
 
 //        System.out.println("Second  -> "+ coffee_1.getDescription());
@@ -23,6 +22,8 @@ public class BeveragesExample {
 
         coffee_1 = new Milk(coffee_1);
         System.out.println("Fifth -> "+ coffee_1.getDescription());
+
+
     }
 }
 
