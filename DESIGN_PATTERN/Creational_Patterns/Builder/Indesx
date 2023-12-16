@@ -1,0 +1,16 @@
+1. Disadvantage of Multiple setter methods is :
+
+    - Object can have a inconsistent state, while setting methods. if we have 10-20 setter methods, then
+
+    House house = new House()
+    house.set
+    house.set
+    house.set ...
+    /..
+    20 times. if all below not ran then there is a issue.
+
+    - if setter logic is different for every different house represenatation example :
+    - igglo house
+    - morning house. then this simple setters will not work.....
+
+
