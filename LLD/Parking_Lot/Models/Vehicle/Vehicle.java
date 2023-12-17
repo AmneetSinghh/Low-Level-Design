@@ -1,7 +1,8 @@
 package LLD.Parking_Lot.Models.Vehicle;
 
 public class Vehicle {
-
+    String vehicleNumber;
+    VehicleType type;
     public Vehicle(String no, VehicleType type){
         this.type = type;
         this.vehicleNumber = no;
@@ -21,7 +22,4 @@ public class Vehicle {
     public void setType(VehicleType type) {
         this.type = type;
     }
-
-    String vehicleNumber;
-     VehicleType type;
 }

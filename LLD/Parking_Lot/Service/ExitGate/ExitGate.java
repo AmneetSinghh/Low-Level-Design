@@ -1,5 +1,5 @@
 package LLD.Parking_Lot.Service.ExitGate;
-import LLD.Parking_Lot.Models.ParkingSlot.ParkingSlot;
+import LLD.Parking_Lot.Models.ParkingSlot.IParkingSlot;
 import LLD.Parking_Lot.Models.Ticket.Ticket;
 import LLD.Parking_Lot.Service.ParkingSlot.ParkingSlotManager.ParkingSlotManager;
 import LLD.Parking_Lot.Service.Ticket.TicketParkingSlotMapper;
@@ -31,7 +31,7 @@ public class ExitGate {
     }
 
     public void removeVehicle(){
-        ParkingSlot parkingSlot = ticketParkingSlotMapper.getSlot(ticket);
+        IParkingSlot parkingSlot = ticketParkingSlotMapper.getSlot(ticket);
         ticketParkingSlotMapper.ticketAndSlotMap.remove(ticket);
         parkingSlotManager.removeVehicle(parkingSlot);
 

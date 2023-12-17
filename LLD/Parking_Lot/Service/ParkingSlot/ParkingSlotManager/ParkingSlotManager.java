@@ -1,8 +1,7 @@
 package LLD.Parking_Lot.Service.ParkingSlot.ParkingSlotManager;
 import java.util.List;
 import java.util.logging.Logger;
-
-import LLD.Parking_Lot.Models.ParkingSlot.ParkingSlot;
+import LLD.Parking_Lot.Models.ParkingSlot.IParkingSlot;
 import LLD.Parking_Lot.Models.Vehicle.Vehicle;
 import LLD.Parking_Lot.Models.Vehicle.VehicleType;
 import LLD.Parking_Lot.Service.ParkingSlot.ParkingSpace.IParkingSpace;
@@ -15,32 +14,35 @@ TODO :
 
 public abstract class ParkingSlotManager {
 
-    List<ParkingSlot> parkingSlots;
+    List<IParkingSlot> parkingSlots;
     IParkingSpace parkingSpace;
 
+    /*
+     * Each either two/four wheeler get mapped to some parking strategy.
+     */
     ParkingSlotManager(IParkingSpace parkingSpace){
         this.parkingSpace = parkingSpace;
     }
 
-    public ParkingSlot findParkingSlot(int entryGate){
+    public IParkingSlot findParkingSlot(int entryGate){
         return parkingSpace.find(entryGate,parkingSlots);
     }
 
-    public void addParkingSpace(ParkingSlot parkingSlot){
+    public void addParkingSpace(IParkingSlot parkingSlot){
         this.parkingSlots.add(parkingSlot);
     }
 
-    public void removeParkingSpace(ParkingSlot parkingSlot){
+    public void removeParkingSpace(IParkingSlot parkingSlot){
         this.parkingSlots.remove(parkingSlot);
     }
 
-    public void parkVehicle(Vehicle vehicle, ParkingSlot parkingSlot){
+    public void parkVehicle(Vehicle vehicle, IParkingSlot parkingSlot){
         System.out.println("Park Vehicle : "+ vehicle.toString()+ " - "+ vehicle.getType()+ " in slot : "+ parkingSlot.getId()+" - "+parkingSlot.getVehicle().getType());
         parkingSlots.remove(parkingSlot);
         parkingSlot.parkVehicle(vehicle);
     }
 
-    public void removeVehicle(ParkingSlot parkingSlot){
+    public void removeVehicle(IParkingSlot parkingSlot){
         parkingSlot.removeVehicle();
         parkingSlots.add(parkingSlot);
     }

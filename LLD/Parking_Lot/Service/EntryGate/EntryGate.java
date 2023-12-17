@@ -1,5 +1,5 @@
 package LLD.Parking_Lot.Service.EntryGate;
-import LLD.Parking_Lot.Models.ParkingSlot.ParkingSlot;
+import LLD.Parking_Lot.Models.ParkingSlot.IParkingSlot;
 import LLD.Parking_Lot.Models.Ticket.Ticket;
 import LLD.Parking_Lot.Models.Vehicle.Vehicle;
 import LLD.Parking_Lot.Service.ParkingSlot.ParkingSlotManager.ParkingSlotManager;
@@ -10,8 +10,8 @@ We have to use entry gate manager, if we want to add entry gates, remove entry g
 */
 public class EntryGate {
     Ticket ticket;
-    ParkingSlotManager parkingSlotManager;// pass it dynamically through factory.
-    ParkingSlot parkingSlot;
+    ParkingSlotManager parkingSlotManager;          // pass it dynamically through factory.
+    IParkingSlot parkingSlot;
 
     public Ticket getTicket() {
         return ticket;
@@ -21,19 +21,18 @@ public class EntryGate {
         this.ticket = ticket;
     }
 
-    public ParkingSlotManager getParkingSlotManager() {
-        return parkingSlotManager;
-    }
-
     public void setParkingSlotManager(ParkingSlotManager parkingSlotManager) {
+        /*
+         * We not want to setParking slot - we will get it dynbamically using factory, so in factory we need to use registory.
+         */
         this.parkingSlotManager = parkingSlotManager;
     }
 
-    public ParkingSlot getParkingSlot() {
+    public IParkingSlot getParkingSlot() {
         return parkingSlot;
     }
 
-    public void setParkingSlot(ParkingSlot parkingSlot) {
+    public void setParkingSlot(IParkingSlot parkingSlot) {
         this.parkingSlot = parkingSlot;
     }
 

@@ -21,8 +21,8 @@ public class ElevatorSystemDriver {
         floor.pressButton(elevatorRequest);
     }
 
-    public static List<ElevatorController> constructElevator(int floors){
-        List<ElevatorController> list = new ArrayList<>();
+    public static List<IElevatorController> constructElevator(int floors){
+        List<IElevatorController> list = new ArrayList<>();
         for(int i=1;i<=floors;i++){
             list.add(new ElevatorController(i));
         }

@@ -5,26 +5,26 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
-import LLD.Parking_Lot.Models.ParkingSlot.ParkingSlot;
+import LLD.Parking_Lot.Models.ParkingSlot.IParkingSlot;
 import LLD.Parking_Lot.Models.Ticket.Ticket;
 import LLD.Parking_Lot.Models.Vehicle.VehicleType;
 
 public class TicketParkingSlotMapper {
-    public HashMap<Ticket, ParkingSlot> ticketAndSlotMap;
+    public HashMap<Ticket, IParkingSlot> ticketAndSlotMap;
     public TicketParkingSlotMapper(){
         ticketAndSlotMap = new HashMap<>();
     }
 
-    public void addSlot(Ticket ticket,ParkingSlot parkingSlot){
+    public void addSlot(Ticket ticket,IParkingSlot parkingSlot){
         ticketAndSlotMap.put(ticket,parkingSlot);
     }
 
-    public ParkingSlot getSlot(Ticket ticket){
+    public IParkingSlot getSlot(Ticket ticket){
         return ticketAndSlotMap.get(ticket);
     }
     public List<Ticket> getWheeler(VehicleType type){
         List<Ticket> list = new ArrayList<>();
-        for(Map.Entry<Ticket,ParkingSlot> entry: ticketAndSlotMap.entrySet()  ){
+        for(Map.Entry<Ticket,IParkingSlot> entry: ticketAndSlotMap.entrySet()  ){
             if(entry.getKey().getVehicle().getType().equals(type)){
                 list.add(entry.getKey());
             }

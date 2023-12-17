@@ -10,7 +10,7 @@ import LLD.Elevator_Systems.models.ElevatorDirection;
 import LLD.Elevator_Systems.models.ElevatorRequest;
 import LLD.Elevator_Systems.models.ElevatorStatus;
 
-public class ElevatorController {
+public class ElevatorController implements IElevatorController{
     ElevatorCar elevatorCar;
     PriorityQueue<ElevatorRequest> minFloor = new PriorityQueue<>(new MyComparator2());
     PriorityQueue<ElevatorRequest> maxFloor = new PriorityQueue<ElevatorRequest>(new MyComparator1());
@@ -32,13 +32,11 @@ public class ElevatorController {
             if(request.getSourceFloor() >=this.elevatorCar.getCurrentFloor()){
                 System.out.println("Inserted into minFloor queue");
                 minFloor.add(request);
-                // internal request can be many you can take a array
             }
             else{
                 System.out.println("Inserted into pending queue");
                 pendingQueue.add(request);
             }
-
         }
         else{
             if(request.getSourceFloor() <this.elevatorCar.getCurrentFloor()){
@@ -52,8 +50,9 @@ public class ElevatorController {
         }
         controlElevator();
     }
+    // when to change direction to DOWN?
 
-    public void controlElevator(){
+    private void controlElevator(){
         while(!minFloor.isEmpty() || !maxFloor.isEmpty() || !pendingQueue.isEmpty()){
             elevatorCar.setElevatorStatus(ElevatorStatus.MOVING);
             System.out.println("********* Elevator Status ************* : "+ elevatorCar.getElevatorStatus()+" Direction -> "+ elevatorCar.getElevatorDirection());
@@ -68,12 +67,20 @@ public class ElevatorController {
         System.out.println("********* Elevator Status ************* : "+ elevatorCar.getElevatorStatus());
     }
 
-    public void moveElevator(PriorityQueue<ElevatorRequest> queue,ElevatorDirection elevatorDirection){
+    private void moveElevator(PriorityQueue<ElevatorRequest> queue,ElevatorDirection elevatorDirection){
+        // In one time we will only get 1 request. no need for while loop.
         while(!queue.isEmpty()){
             ElevatorRequest nextFloorPerson = queue.poll();
             System.out.println("Next for person : "+ nextFloorPerson.getDestinationFloor());
             elevatorCar.move(nextFloorPerson.getDestinationFloor(),elevatorDirection);
         }
+        if(elevatorDirection.equals(ElevatorDirection.UP)){
+            elevatorCar.setElevatorDirection(ElevatorDirection.DOWN);
+        }
+        else{
+            elevatorCar.setElevatorDirection(ElevatorDirection.UP);
+        }
+        // change lift direction.
         // add data from pending queue to minFloor for future.
         while(!pendingQueue.isEmpty()){
             System.out.println("Adding to the pending queue: "+ pendingQueue.peek().getDestinationFloor()+ " Direction: "+ pendingQueue.peek().getElevatorDirection());

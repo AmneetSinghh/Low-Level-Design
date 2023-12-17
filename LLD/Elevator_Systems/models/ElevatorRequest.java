@@ -2,6 +2,8 @@ package LLD.Elevator_Systems.models;
 
 public class ElevatorRequest {
     int sourceFloor;
+    int destinationFloor;
+    ElevatorDirection elevatorDirection;// it will be the current direction.
 
     public ElevatorRequest(int sourceFloor, int destinationFloor, ElevatorDirection elevatorDirection){
         this.sourceFloor= sourceFloor;
@@ -32,7 +34,4 @@ public class ElevatorRequest {
     public void setElevatorDirection(ElevatorDirection elevatorDirection) {
         this.elevatorDirection = elevatorDirection;
     }
-
-    int destinationFloor;
-    ElevatorDirection elevatorDirection;
 }

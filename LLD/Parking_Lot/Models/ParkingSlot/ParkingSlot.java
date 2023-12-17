@@ -1,9 +1,7 @@
 package LLD.Parking_Lot.Models.ParkingSlot;
-
 import LLD.Parking_Lot.Models.Vehicle.Vehicle;
-import LLD.Parking_Lot.Models.Vehicle.VehicleType;
 
-public class ParkingSlot {
+abstract class ParkingSlot implements IParkingSlot{
 
 
     int id;
@@ -23,6 +21,8 @@ public class ParkingSlot {
         setVehicle(null);
     }
 
+    abstract public int getPrice();
+
     public int getId() {
         return id;
     }
@@ -37,10 +37,6 @@ public class ParkingSlot {
 
     public void setEmpty(boolean empty) {
         isEmpty = empty;
-    }
-
-    public int getPrice() {
-        return price;
     }
 
     public void setPrice(int price) {

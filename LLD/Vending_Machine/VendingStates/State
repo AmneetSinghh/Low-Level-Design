@@ -20,5 +20,4 @@ public interface State {
 
     public void updateInventory(VendingMachine machine, Item item, int codeNumber) throws Exception;
 
-
 }

@@ -2,11 +2,11 @@ package LLD.Parking_Lot.Service.ParkingSlot.ParkingSpace;
 
 import java.util.List;
 
-import LLD.Parking_Lot.Models.ParkingSlot.ParkingSlot;
+import LLD.Parking_Lot.Models.ParkingSlot.IParkingSlot;
 
 public class Default implements IParkingSpace{
     @Override
-    public ParkingSlot find(int enteranceGate, List<ParkingSlot> parkingSlotList){
+    public IParkingSlot find(int enteranceGate, List<IParkingSlot> parkingSlotList){
         try{
             if(parkingSlotList.isEmpty()){
                 throw new Exception("No parking space found");

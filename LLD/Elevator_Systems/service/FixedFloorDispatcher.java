@@ -7,13 +7,13 @@ import LLD.Elevator_Systems.models.ElevatorRequest;
 
 public class FixedFloorDispatcher implements ExternalButtonDispatcher{
 
-    List<ElevatorController> elevatorControllers ;
+    List<IElevatorController> elevatorControllers ;
     private static FixedFloorDispatcher uniqueInstance;
 
     // constructor is private  using singleton pattern here.
-    private FixedFloorDispatcher(List<ElevatorController> elevatorControllers){ this.elevatorControllers = elevatorControllers;}   // constructor is private.
+    private FixedFloorDispatcher(List<IElevatorController> elevatorControllers){ this.elevatorControllers = elevatorControllers;}   // constructor is private.
 
-    public static FixedFloorDispatcher getInstance(List<ElevatorController> elevatorControllers){
+    public static FixedFloorDispatcher getInstance(List<IElevatorController> elevatorControllers){
         if(uniqueInstance == null){
             uniqueInstance = new FixedFloorDispatcher(elevatorControllers);
         }

@@ -2,8 +2,8 @@ package LLD.Parking_Lot.Service.ParkingSlot.ParkingSpace;
 
 import java.util.List;
 
-import LLD.Parking_Lot.Models.ParkingSlot.ParkingSlot;
+import LLD.Parking_Lot.Models.ParkingSlot.IParkingSlot;
 
 public interface IParkingSpace {
-    ParkingSlot find(int enteranceGate, List<ParkingSlot> parkingSlotList);
+    IParkingSlot find(int enteranceGate, List<IParkingSlot> parkingSlotList);
 }

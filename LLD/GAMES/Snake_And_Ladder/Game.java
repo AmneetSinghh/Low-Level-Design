@@ -57,8 +57,8 @@ public class Game {
 
     public Player CurrentPlayerTurn(){
         Player player = players.peek();
-        players.add(player);
-        players.remove();
+        players.add(player); // added to last.
+        players.remove(); // from front.
         return player;
     }
 

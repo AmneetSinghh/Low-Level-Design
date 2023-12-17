@@ -4,7 +4,8 @@ import java.util.List;
 import java.util.Map;
 // Practice it again bro.
 
-import LLD.Parking_Lot.Models.ParkingSlot.ParkingSlot;
+import LLD.Parking_Lot.Models.ParkingSlot.IParkingSlot;
+import LLD.Parking_Lot.Models.ParkingSlot.TwoWheelerParkingSlot;
 import LLD.Parking_Lot.Models.Ticket.Ticket;
 import LLD.Parking_Lot.Models.Vehicle.Vehicle;
 import LLD.Parking_Lot.Models.Vehicle.VehicleType;
@@ -79,10 +80,10 @@ public class ParkingSlotRunner {
 
 
 
-    public static List<ParkingSlot> getParkingLots(int price, VehicleType type){
-        List<ParkingSlot> list = new ArrayList<>();
+    public static List<IParkingSlot> getParkingLots(int price, VehicleType type){
+        List<IParkingSlot> list = new ArrayList<>();
         for(int i=1;i<=10;i++){
-            ParkingSlot parkingSlot = new ParkingSlot();
+            IParkingSlot parkingSlot = new TwoWheelerParkingSlot();
             parkingSlot.setId(i);
             parkingSlot.setEmpty(true);
             parkingSlot.setPrice(price);

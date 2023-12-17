@@ -1,6 +1,6 @@
 package LLD.Parking_Lot.Models.Ticket;
 
-import LLD.Parking_Lot.Models.ParkingSlot.ParkingSlot;
+import LLD.Parking_Lot.Models.ParkingSlot.IParkingSlot;
 import LLD.Parking_Lot.Models.Vehicle.Vehicle;
 
 public class Ticket {
@@ -20,16 +20,16 @@ public class Ticket {
         this.vehicle = vehicle;
     }
 
-    public ParkingSlot getParkingSlot() {
+    public IParkingSlot getParkingSlot() {
         return parkingSlot;
     }
 
-    public void setParkingSlot(ParkingSlot parkingSlot) {
+    public void setParkingSlot(IParkingSlot parkingSlot) {
         this.parkingSlot = parkingSlot;
     }
 
     String entryTime;
     Vehicle vehicle;
-    ParkingSlot parkingSlot;
+    IParkingSlot parkingSlot;
 
 }

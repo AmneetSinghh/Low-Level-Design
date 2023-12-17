@@ -1,9 +1,6 @@
 package LLD.Car_Rental_System;
-
-
 import java.util.ArrayList;
 import java.util.List;
-
 import LLD.Car_Rental_System.Product.Vehicle;
 import LLD.Car_Rental_System.Product.VehicleType;
 
@@ -27,7 +24,7 @@ public class Store {
         inventoryManagement = new VehicleInventoryManagement(vehicles);
     }
 
-    //addReservatopm, update reservation,get reservation, delete reservation,
+    //addReservation, update reservation,get reservation, delete reservation,
     public Reservation createReservation(Vehicle vehicle, User user){
         Reservation reservation = new Reservation();
         reservation.createReserve(user,vehicle);
@@ -46,6 +43,8 @@ public class Store {
 
 
 /*
+
 Notes :
 1. Vehicle is only managed by the vehicle inventory management, but that is only attached to store, so store is the caller part for reservation and vehicles.
- */
+
+*/

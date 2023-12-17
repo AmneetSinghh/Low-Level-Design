@@ -3,30 +3,13 @@ package LLD.Elevator_Systems.models;
 import LLD.Elevator_Systems.service.InternalButton;
 
 public class ElevatorCar {
-    int id;
-
-    public int getId() {
-        return id;
-    }
-
-    public void setId(int id) {
-        this.id = id;
-    }
 
     public ElevatorDirection getElevatorDirection() {
         return elevatorDirection;
     }
 
-    public void setElevatorDirection(ElevatorDirection elevatorDirection) {
-        this.elevatorDirection = elevatorDirection;
-    }
-
-    public ElevatorDisplay getElevatorDisplay() {
-        return elevatorDisplay;
-    }
-
-    public void setElevatorDisplay(ElevatorDisplay elevatorDisplay) {
-        this.elevatorDisplay = elevatorDisplay;
+    public void setElevatorDirection(ElevatorDirection direction){
+        this.elevatorDirection = direction;
     }
 
     public ElevatorStatus getElevatorStatus() {
@@ -41,20 +24,9 @@ public class ElevatorCar {
         return currentFloor;
     }
 
-    public void setCurrentFloor(int currentFloor) {
-        this.currentFloor = currentFloor;
-    }
 
-    public InternalButton getInternalButton() {
-        return internalButton;
-    }
-
-    public void setInternalButton(InternalButton internalButton) {
-        this.internalButton = internalButton;
-    }
-
+    int id;
     ElevatorDirection elevatorDirection;
-    ElevatorDisplay elevatorDisplay;
     ElevatorStatus elevatorStatus;
     int currentFloor;
     InternalButton internalButton;

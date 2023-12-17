@@ -1,23 +1,37 @@
 package LLD.Parking_Lot.Service.ParkingSlot.ParkingSlotManager;
 
-import java.util.ArrayList;
-import java.util.List;
-import java.util.Vector;
+import java.util.*;
 
-import LLD.Parking_Lot.Models.ParkingSlot.ParkingSlot;
 import LLD.Parking_Lot.Models.Vehicle.VehicleType;
 import LLD.Parking_Lot.Service.ParkingSlot.ParkingSpace.Default;
-import LLD.Parking_Lot.Service.ParkingSlot.ParkingSpace.IParkingSpace;
 
+/*
+See txn Searfch manager class, to get idea what manager classes will do.
+ */
+
+/*a
+ * Do call it in entry gate screen.
+ */
 public class ParkingSpotManagerFactory {
 
+    Map<String,ParkingSlotManager> parkingSlotRegistry = new HashMap<>();
+
     public ParkingSlotManager getParkingSpotManager(VehicleType type){
+        ParkingSlotManager manager = null;
+        String vehicleType = type.toString();
         if(type.equals(VehicleType.TWO_WHEELER)){
-            return new TwoWheelerManager(new Default());
+            if(parkingSlotRegistry.containsKey(vehicleType)){
+                return parkingSlotRegistry.get(vehicleType);
+            }
+            manager = new TwoWheelerManager(new Default());
         }
         else if(type.equals(VehicleType.FOUR_WHEELER)){
-            return new FourWheelerManager(new Default());
+            if(parkingSlotRegistry.containsKey(vehicleType)){
+                return parkingSlotRegistry.get(vehicleType);
+            }
+            manager = new FourWheelerManager(new Default());
         }
+        parkingSlotRegistry.put(vehicleType,manager);
         return null;
     }
 }

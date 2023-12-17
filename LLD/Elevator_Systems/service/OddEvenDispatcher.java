@@ -12,13 +12,13 @@ import LLD.Elevator_Systems.models.ElevatorRequest;
 
 public class OddEvenDispatcher implements ExternalButtonDispatcher {
 
-    List<ElevatorController> elevatorControllers ;
+    List<IElevatorController> elevatorControllers ;
     private static OddEvenDispatcher uniqueInstance;
 
     // constructor is private  using singleton pattern here.
-    private OddEvenDispatcher(List<ElevatorController> elevatorControllers){ this.elevatorControllers = elevatorControllers;}   // constructor is private.
+    private OddEvenDispatcher(List<IElevatorController> elevatorControllers){ this.elevatorControllers = elevatorControllers;}   // constructor is private.
 
-    public static OddEvenDispatcher getInstance(List<ElevatorController> elevatorControllers){
+    public static OddEvenDispatcher getInstance(List<IElevatorController> elevatorControllers){
         if(uniqueInstance == null){
             uniqueInstance = new OddEvenDispatcher(elevatorControllers);
         }

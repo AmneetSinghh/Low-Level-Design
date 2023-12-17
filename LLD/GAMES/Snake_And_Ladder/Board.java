@@ -1,6 +1,6 @@
 package LLD.GAMES.Snake_And_Ladder;
 
-public class Board {
+public class Board implements BoardI{
     Cell[][] cells;
     int snakes;
     public Board(int boardCount, int snakes, int ladders){
@@ -40,7 +40,7 @@ public class Board {
             }
             if(cells[start/cells.length][start%cells.length].jump == null){// snake and ladders should not be on the same cell.
                 System.out.println("Board ladder added : "+ start+" "+ end);
-                cells[start/cells.length][start%cells.length] =addJump(start,end,JumpType.LADDER);
+                cells[start/cells.length][start%cells.length] = addJump(start,end,JumpType.LADDER);
                 --ladders;
             }
         }
@@ -49,7 +49,7 @@ public class Board {
         System.out.println("S");;
     }
 
-    Cell addJump(int start, int end, JumpType jumpType){
+    private Cell addJump(int start, int end, JumpType jumpType){
         Cell cell = new Cell();
         Jump jump = new Jump();
         jump.startPos = start;
@@ -59,13 +59,13 @@ public class Board {
         return cell;
     }
 
-    Cell getCell(int position){
+    public Cell getCell(int position){
         int row = position/cells.length;
         int col = position% cells.length;
         return cells[row][col];
     }
 
-    public int getRandomNumber(int min, int max) {
+    private int getRandomNumber(int min, int max) {
         return (int) ((Math.random() * (max - min)) + min);
     }
 }

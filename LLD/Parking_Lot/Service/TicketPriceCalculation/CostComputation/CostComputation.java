@@ -11,6 +11,7 @@ public class CostComputation {
         this.pricingStrategy = pricingStrategy;
     }
 
+    // make it abstract class we can do that.
     public int price(){
         return this.pricingStrategy.price();
     }
