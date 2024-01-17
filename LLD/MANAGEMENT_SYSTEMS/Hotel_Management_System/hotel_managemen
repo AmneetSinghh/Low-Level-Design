@@ -142,7 +142,6 @@ interface BaseRoomCharge {
 
 class RoomCharge implements BaseRoomCharge {
 
-	
 	double cost;
 	Double getCost() {
 		return cost;

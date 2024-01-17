@@ -1,5 +1,5 @@
 
-public class Board {
+public class Board implements BoardI{
 
     public int size;
     public PlayingPiece[][]board;
@@ -18,7 +18,6 @@ public class Board {
         board[row][column] = playingPiece;//we can add the piece.
         return true;
     }
-
 
 
     // free pieces.
