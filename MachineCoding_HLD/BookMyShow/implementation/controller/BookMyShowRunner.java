@@ -20,9 +20,9 @@ import MachineCoding_HLD.BookMyShow.implementation.model.Show;
 import MachineCoding_HLD.BookMyShow.implementation.model.dto.BookingRequestDto;
 import MachineCoding_HLD.BookMyShow.implementation.service.*;
 import MachineCoding_HLD.BookMyShow.implementation.service.impl.*;
-import MachineCoding_HLD.BookMyShow.implementation.service.seatConcurrency.SeatConcurrency;
 import MachineCoding_HLD.BookMyShow.implementation.service.seatConcurrency.SeatConcurrencyImpl;
 
+import java.util.Arrays;
 import java.util.List;
 import java.util.Map;
 
@@ -58,8 +58,11 @@ public class BookMyShowRunner {
         /*
          * no one will be able to book seat, as we are setting individually.
          */
-        List<Integer> seats = List.of(0,1);
-        List<Integer> seats_1 = List.of(1,0);
+        List<Integer> seats = Arrays.asList(0, 1);
+        List<Integer> seats_1 = Arrays.asList(1,0);
+        /*
+         Do in order for handling concurrency.
+         */
         Thread booking_request_1 = new Thread(() -> {
             BookingRequestDto bookingRequestDto = new BookingRequestDto();
             bookingRequestDto.setShow(showService.getShowById(1));

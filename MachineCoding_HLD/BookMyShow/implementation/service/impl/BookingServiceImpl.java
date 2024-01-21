@@ -14,6 +14,7 @@ import MachineCoding_HLD.BookMyShow.implementation.service.bookingChargeDecorato
 import MachineCoding_HLD.BookMyShow.implementation.service.bookingChargeDecorator.ShowTypeCharge;
 
 import java.util.ArrayList;
+import java.util.Collections;
 import java.util.List;
 
 
@@ -34,6 +35,7 @@ public class BookingServiceImpl implements BookingService {
     @Override
     public Booking create(BookingRequestDto bookingRequestDto) {
         try{
+            Collections.sort(bookingRequestDto.getSeatNo());
             Booking booking = new Booking();
             booking.setId(1);
             booking.setCustomer(bookingRequestDto.getCustomer());
