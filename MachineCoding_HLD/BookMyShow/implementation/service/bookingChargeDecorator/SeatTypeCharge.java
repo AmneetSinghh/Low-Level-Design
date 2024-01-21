@@ -16,13 +16,13 @@ public class SeatTypeCharge extends BaseBookingChargeImpl {
         int price = 0;
         Seat seat = seatService.getByIdAndHallNo(seatNo,hallNo);
         switch (seat.getSeatType()){
-            case STANDARD -> {
+            case STANDARD : {
                 price = 250;
             }
-            case REGULAR -> {
+            case REGULAR : {
                 price = 100;
             }
-            case PREMIUM -> {
+            case PREMIUM : {
                 price = 300;
             }
         }

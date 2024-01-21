@@ -3,7 +3,6 @@ package MachineCoding_HLD.BookMyShow.implementation.service.impl;
 import MachineCoding_HLD.BookMyShow.implementation.data.Repository;
 import MachineCoding_HLD.BookMyShow.implementation.enums.BookingStatus;
 import MachineCoding_HLD.BookMyShow.implementation.model.Booking;
-import MachineCoding_HLD.BookMyShow.implementation.model.Seat;
 import MachineCoding_HLD.BookMyShow.implementation.model.Show;
 import MachineCoding_HLD.BookMyShow.implementation.model.Ticket;
 import MachineCoding_HLD.BookMyShow.implementation.model.dto.BookingRequestDto;
@@ -47,6 +46,7 @@ public class BookingServiceImpl implements BookingService {
                  */
                 int hallNo = bookingRequestDto.getShow().getHall().getHallNo();
                 seatService.assignSeat(seatNo,hallNo);
+
                 /*
                  * make ticket
                  */
@@ -90,12 +90,10 @@ public class BookingServiceImpl implements BookingService {
         return null;
     }
 
-    @Override
-    public BaseBookingCharge calculateChargeDecorator(Show show, int seatNo, int hallNo) {
+    private BaseBookingCharge calculateChargeDecorator(Show show, int seatNo, int hallNo) {
         /*
          * Used decorator pattern.
          */
-        Seat seat = seatService.getByIdAndHallNo(seatNo,hallNo);
         BaseBookingCharge baseBookingCharge = new BaseBookingChargeImpl();
         baseBookingCharge = new SeatTypeCharge(baseBookingCharge,seatService);
         baseBookingCharge = new ShowTypeCharge(baseBookingCharge);

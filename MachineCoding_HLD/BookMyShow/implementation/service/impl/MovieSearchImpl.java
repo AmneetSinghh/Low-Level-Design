@@ -36,22 +36,22 @@ public class MovieSearchImpl implements MovieSearch, MovieSearchContract {
     @Override
     public Movie search(String value, SearchType type) throws Exception {
         switch (type) {
-            case CITY -> {
+            case CITY : {
                 return searchByCity(value);
             }
-            case GENRE -> {
+            case GENRE : {
                 return searchByGenre(value);
             }
-            case TITLE -> {
+            case TITLE : {
                 return searchByTitle(value);
             }
-            case RELEASE_DATE -> {
+            case RELEASE_DATE : {
                 return searchByReleaseDate(value);
             }
-            case LANGUAGE -> {
+            case LANGUAGE : {
                 return searchByLanguage(value);
             }
-            default -> throw new Exception("Search not available by :" + type.toString());
+            default : throw new Exception("Search not available by :" + type.toString());
         }
     }
 }

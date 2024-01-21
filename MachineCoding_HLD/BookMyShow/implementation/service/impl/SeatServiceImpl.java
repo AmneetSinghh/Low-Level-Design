@@ -6,11 +6,20 @@ import MachineCoding_HLD.BookMyShow.implementation.enums.SeatType;
 import MachineCoding_HLD.BookMyShow.implementation.model.Hall;
 import MachineCoding_HLD.BookMyShow.implementation.model.Seat;
 import MachineCoding_HLD.BookMyShow.implementation.service.SeatService;
+import MachineCoding_HLD.BookMyShow.implementation.service.seatConcurrency.SeatConcurrency;
+
 import java.util.List;
 
+/*
+ * seats will have group id. for pricing.
+ */
 public class SeatServiceImpl implements SeatService {
+    public SeatServiceImpl(SeatConcurrency seatConcurrency){
+        this.seatConcurrency = seatConcurrency;
+    }
 
     Repository repository = Repository.getInstance();
+    SeatConcurrency seatConcurrency;
 
     @Override
     public void addAll(Hall hall) {
@@ -34,22 +43,34 @@ public class SeatServiceImpl implements SeatService {
         return repository.getAllSeatsByHallNo(hallNo);
     }
 
-    // seats will have group id. for pricing.
+
 
 
     /*
-     * How to handle concurrency.
+     * ways to handle concurrency :
+     * centralized locking : Redis-> lock on seatNo_hallNo for 3 minutes with expiry :
+     *
+     *
      */
+
     @Override
-    public void assignSeat(int seatNo, int hallNo) throws Exception {
-        /*
-         * locking
-         */
+    public Boolean assignSeat(int seatNo, int hallNo) throws Exception {
         Seat seat = getByIdAndHallNo(seatNo,hallNo);
         if(seat.getSeatStatus().equals(SeatStatus.BOOKED) || seat.getSeatStatus().equals(SeatStatus.NOT_AVAILABLE)){
             throw new Exception("Seats already booked");
         }
-        seat.setSeatStatus(SeatStatus.BOOKED);
+
+        /*
+         * locking
+         */
+        if(seatConcurrency.lock(seatNo,hallNo)){
+            System.out.println("Seat no: "+ seatNo+" Locking by Thread-> "+ Thread.currentThread().getName());
+            seat.setSeatStatus(SeatStatus.BOOKED);
+            System.out.println("Seat no: "+ seatNo+" UnLocking by Thread-> "+ Thread.currentThread().getName());
+            seatConcurrency.unLock(seatNo,hallNo);
+            return true;
+        }
+        throw new Exception("Not able to assign seat"+ Thread.currentThread().getName());
     }
 
     @Override

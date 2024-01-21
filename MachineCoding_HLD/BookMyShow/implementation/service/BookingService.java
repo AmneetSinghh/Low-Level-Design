@@ -16,7 +16,6 @@ public interface BookingService {
 
     Booking getBookingById(int id);
 
-    BaseBookingCharge calculateChargeDecorator(Show show, int seatNo, int hallNo);
 }
 
 /*

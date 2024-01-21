@@ -10,13 +10,13 @@ public class ShowTypeCharge extends BaseBookingChargeImpl {
     public int calculateAmount(Show show, int seatNo, int hallNo) {
         int price = 0;
         switch (show.getShowType()){
-            case TWO_D -> {
+            case TWO_D : {
                 price = 100;
             }
-            case THREE_D -> {
+            case THREE_D : {
                 price = 200;
             }
-            case I_MAX -> {
+            case I_MAX : {
                 price = 300;
             }
         }

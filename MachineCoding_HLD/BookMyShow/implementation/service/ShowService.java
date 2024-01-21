@@ -13,6 +13,6 @@ public interface ShowService {
     void edit(Show show);
     List<Show> getAll();
     Map<Cinema,List<Show>> getShowsByMovie(Movie movie);// show1, show2, show3,,   group by cinema.
-
+    Show getShowById(int id);
     // show beautiful information same as bookMyShow.
 }
