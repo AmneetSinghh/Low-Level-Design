@@ -1,0 +1,8 @@
+top use-case:
+
+0. search movies.
+1. create booking, edit booking & cancel booking.
+2. assign a seat while booking
+3. refund if booking failed or I cancelled booking before a aligned time.
+4. payment supports credit card, debit, cash, upi
+5. able to add discount coupen while payment.

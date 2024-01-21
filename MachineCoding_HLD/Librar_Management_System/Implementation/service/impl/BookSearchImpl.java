@@ -16,20 +16,20 @@ public class BookSearchImpl implements BookSearch, BookSearchTypes {
 
     @Override
     public BookItem search(BookSearchType type, String value) throws Exception {
-        switch (type){
-            case TITLE : {
+        switch (type) {
+            case TITLE -> {
                 return searchByTitle(value);
             }
-            case AUTHOR : {
+            case AUTHOR -> {
                 return searchByAuthor(value);
             }
-            case SUBJECT : {
+            case SUBJECT -> {
                 return searchBySubject(value);
             }
-            case PUBLICATION_DATE : {
+            case PUBLICATION_DATE -> {
                 return searchByPublicationDate(value);
             }
-            default : throw new Exception("Search not available by :"+ type.toString());
+            default -> throw new Exception("Search not available by :" + type.toString());
         }
     }
 
