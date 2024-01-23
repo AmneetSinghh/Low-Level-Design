@@ -12,9 +12,8 @@ public class SeatTypeCharge extends BaseBookingChargeImpl {
         this.seatService = seatService;
     }
     @Override
-    public int calculateAmount(Show show, int seatNo, int hallNo) {
+    public int calculateAmount(Seat seat) {
         int price = 0;
-        Seat seat = seatService.getByIdAndHallNo(seatNo,hallNo);
         switch (seat.getSeatType()){
             case STANDARD : {
                 price = 250;
@@ -26,6 +25,6 @@ public class SeatTypeCharge extends BaseBookingChargeImpl {
                 price = 300;
             }
         }
-        return baseBookingCharge.calculateAmount(show,seatNo,hallNo) + price;
+        return baseBookingCharge.calculateAmount(seat) + price;
     }
 }

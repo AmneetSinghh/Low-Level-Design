@@ -9,7 +9,7 @@ import java.util.List;
 public class BookingRequestDto {
     private Show show;
     private Customer customer;
-    private List<Integer> SeatNo;
+    private List<Seat> seats;// it must have slotNo.
 
 
     public Show getShow() {
@@ -28,11 +28,11 @@ public class BookingRequestDto {
         this.customer = customer;
     }
 
-    public List<Integer> getSeatNo() {
-        return SeatNo;
+    public List<Seat> getSeatNo() {
+        return seats;
     }
 
-    public void setSeatNo(List<Integer> seatNo) {
-        SeatNo = seatNo;
+    public void setSeatNo(List<Seat> seatNo) {
+        seats = seatNo;
     }
 }

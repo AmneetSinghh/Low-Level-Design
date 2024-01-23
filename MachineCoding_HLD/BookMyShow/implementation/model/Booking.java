@@ -1,5 +1,4 @@
 package MachineCoding_HLD.BookMyShow.implementation.model;
-
 import MachineCoding_HLD.BookMyShow.implementation.enums.BookingStatus;
 import MachineCoding_HLD.BookMyShow.implementation.model.user.Customer;
 import MachineCoding_HLD.BookMyShow.implementation.service.bookingChargeDecorator.BaseBookingCharge;
@@ -15,6 +14,14 @@ public class Booking {
     private BookingStatus status;
     private long createdAt;
     private BaseBookingCharge baseBookingCharge;
+    private long amount;
+    public long getAmount() {
+        return amount;
+    }
+
+    public void setAmount(long amount) {
+        this.amount = amount;
+    }
 
 
     public BaseBookingCharge getBaseBookingCharge() {

@@ -13,8 +13,8 @@ public class TicketServiceImpl implements TicketService {
     SeatService seatService;
 
     @Override
-    public Ticket createTicket(int seatNo, int hallNo) {
-        Seat seat = seatService.getByIdAndHallNo(seatNo,hallNo);
+    public Ticket createTicket(int seatNo, int showSlotId) {
+        Seat seat = seatService.getByIdAndHallNo(seatNo,showSlotId);
         Ticket ticket = new Ticket(seatNo,seatNo,seat,"BAR_CODE");
         return ticket;
 

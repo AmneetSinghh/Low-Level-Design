@@ -4,6 +4,7 @@ import MachineCoding_HLD.BookMyShow.implementation.model.Cinema;
 import MachineCoding_HLD.BookMyShow.implementation.model.Movie;
 import MachineCoding_HLD.BookMyShow.implementation.model.Show;
 
+import java.util.Date;
 import java.util.List;
 import java.util.Map;
 
@@ -13,6 +14,7 @@ public interface ShowService {
     void edit(Show show);
     List<Show> getAll();
     Map<Cinema,List<Show>> getShowsByMovie(Movie movie);// show1, show2, show3,,   group by cinema.
+    Map<Long,List<Show>> getShowByDate(); // long is the epoch of that day morning 12:00:00
     Show getShowById(int id);
     // show beautiful information same as bookMyShow.
 }

@@ -1,5 +1,23 @@
 package MachineCoding_HLD.BookMyShow.implementation.controller;
 
+/*
+DB SCHEMA:
+
+- (audi - show)
+- many to many relationship.
+- audi can have many shows
+- shows can have many audi's.
+
+tables  lets consider later.
+- audi
+- show
+- seats
+- audi_shows
+- audi_seats
+- seat_info
+
+ */
+
 
 
 /*
@@ -11,17 +29,20 @@ package MachineCoding_HLD.BookMyShow.implementation.controller;
     - observer - in-progress [ for notifications ]
     - Singleton
 
+
+ - easily extendable to Event Booking service lets design on separate module.
+
+
+- determine time for each ML & LLD, set it on your calender in 1 week 2 LLD.
+
 */
 
 
-import MachineCoding_HLD.BookMyShow.implementation.model.Cinema;
-import MachineCoding_HLD.BookMyShow.implementation.model.Movie;
-import MachineCoding_HLD.BookMyShow.implementation.model.Show;
+import MachineCoding_HLD.BookMyShow.implementation.model.*;
 import MachineCoding_HLD.BookMyShow.implementation.model.dto.BookingRequestDto;
 import MachineCoding_HLD.BookMyShow.implementation.service.*;
 import MachineCoding_HLD.BookMyShow.implementation.service.impl.*;
 import MachineCoding_HLD.BookMyShow.implementation.service.seatConcurrency.SeatConcurrencyImpl;
-
 import java.util.Arrays;
 import java.util.List;
 import java.util.Map;
@@ -31,7 +52,8 @@ public class BookMyShowRunner {
         SeatService seatService = new SeatServiceImpl(new SeatConcurrencyImpl());
         CinemaService cinemaService = new CinemaServiceImpl(seatService);
         PaymentService paymentService = new PaymentServiceImpl();
-        BookingService bookingService = new BookingServiceImpl(seatService,paymentService,new TicketServiceImpl(seatService),cinemaService);
+        RefundService refundService = new RefundServiceImpl(paymentService);
+        BookingService bookingService = new BookingServiceImpl(seatService,paymentService,new TicketServiceImpl(seatService),cinemaService,refundService);
         CustomerService customerService = new CustomerServiceImpl();
         MovieService movieService = new MovieServiceImpl();
         ShowService showService = new ShowServiceImpl(movieService,cinemaService);
@@ -67,18 +89,20 @@ public class BookMyShowRunner {
             BookingRequestDto bookingRequestDto = new BookingRequestDto();
             bookingRequestDto.setShow(showService.getShowById(1));
             bookingRequestDto.setCustomer(customerService.getById(1));
-            bookingRequestDto.setSeatNo(seats);
-            bookingService.create(bookingRequestDto);
+            bookingRequestDto.setSeatNo(Arrays.asList(new Seat(), new Seat())); // create seats this is dummy.
+            Booking booking = bookingService.create(bookingRequestDto);
+            System.out.println(booking);
         });
         Thread booking_request_2 = new Thread(() -> {
             BookingRequestDto bookingRequestDto = new BookingRequestDto();
             bookingRequestDto.setShow(showService.getShowById(1));
             bookingRequestDto.setCustomer(customerService.getById(2));
-            bookingRequestDto.setSeatNo(seats_1);
-            bookingService.create(bookingRequestDto);
+            bookingRequestDto.setSeatNo(Arrays.asList(new Seat(), new Seat())); // create seats this is dummy.
+            Booking booking = bookingService.create(bookingRequestDto);
+            System.out.println(booking);
         });
         booking_request_1.start();
-        booking_request_2.start();
+//        booking_request_2.start();
 
 
     }

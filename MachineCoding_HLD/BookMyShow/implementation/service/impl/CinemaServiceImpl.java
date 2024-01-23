@@ -49,10 +49,7 @@ public class CinemaServiceImpl implements CinemaService {
     public void addHall(int no) {
         Hall hall = new Hall();
         hall.init(no);
-        seatService.addAll(hall);
-        List<Seat> seats = seatService.getAllSeatByHallNo(no);
-        hall.setSeats(seats);           // this only do while getting.
-        hall.setTotalSeats(seats.size());
+        hall.setTotalSeats(100);// total seats.
         repository.add(hall);
     }
 

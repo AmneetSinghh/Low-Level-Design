@@ -1,33 +1,43 @@
 package MachineCoding_HLD.BookMyShow.implementation.model;
-
 import MachineCoding_HLD.BookMyShow.implementation.enums.SeatStatus;
 import MachineCoding_HLD.BookMyShow.implementation.enums.SeatType;
 
+/*
+input : show_slot_id,
+*/
+
 public class Seat {
 
-    private Hall hall; // hallId.
     private int id;
     private int row;
     private int col;
     private SeatType seatType;
     private SeatStatus seatStatus;
+    private ShowSlot showSlot; /* seats can only be seen for particular slot */
 
-    public Hall getHall() {
-        return hall;
+    public Seat() {
+
     }
 
-    public void setHall(Hall hall) {
-        this.hall = hall;
+
+    public ShowSlot getShowSlot() {
+        return showSlot;
     }
 
-    public Seat(int id, int row, int col, SeatType seatType, SeatStatus seatStatus, Hall hall) {
+    public void setShowSlot(ShowSlot showSlot) {
+        this.showSlot = showSlot;
+    }
+
+    public Seat(int id, int row, int col, SeatType seatType, SeatStatus seatStatus, ShowSlot showSlot) {
         this.id = id;
         this.row = row;
         this.col = col;
         this.seatType = seatType;
         this.seatStatus = seatStatus;
-        this.hall = hall;
+        this.showSlot = showSlot;
     }
+
+
 
     public int getId() {
         return id;

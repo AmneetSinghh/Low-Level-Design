@@ -52,19 +52,19 @@ public class Repository {
         seatList.add(seat);
     }
 
-    public Seat getByIdAndHallNo(int id, int hallNo){
+    public Seat getByIdAndShowSlot(int id, int showSlotId){
         for(Seat seat : seatList){
-            if(seat.getId() == id && hallNo == seat.getHall().getHallNo()){
+            if(seat.getId() == id && showSlotId == seat.getShowSlot().getId()){
                 return seat;
             }
         }
         return null;
     }
 
-    public List<Seat> getAllSeatsByHallNo(int hallNo){
+    public List<Seat> getAllSeatsByShowSlot(int showSlotId){
         List<Seat> seats = new ArrayList<>();
         for(Seat seat : seatList){
-            if(hallNo == seat.getHall().getHallNo()){
+            if(showSlotId == seat.getShowSlot().getId()){
                 seats.add(seat);
             }
         }

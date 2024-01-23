@@ -2,20 +2,31 @@ package MachineCoding_HLD.BookMyShow.implementation.model;
 
 import MachineCoding_HLD.BookMyShow.implementation.enums.HallStatus;
 
-import java.util.List;
+/*
+ * All information about this hall.
+ */
 
 public class Hall {
+
     private int id;
     private int hallNo;
-    private int totalSeats;
-    private List<Seat> seats; // this is just a model. we can't store seats in hall.
-    private HallStatus status; // only get hall if its available.
-    private Show currentShow;
+    private int totalSeats;     // decouple from show
+    private boolean isActive;
+
+
+    public boolean isActive() {
+        return isActive;
+    }
+
+    public void setActive(boolean active) {
+        isActive = active;
+    }
+
 
     public void init(int no){
         setId(no);
         setHallNo(no);
-        setStatus(HallStatus.AVAILABLE);
+        setActive(true);
 
     }
 
@@ -43,27 +54,4 @@ public class Hall {
         this.totalSeats = totalSeats;
     }
 
-    public List<Seat> getSeats() {
-        return seats;
-    }
-
-    public void setSeats(List<Seat> seats) {
-        this.seats = seats;
-    }
-
-    public HallStatus getStatus() {
-        return status;
-    }
-
-    public void setStatus(HallStatus status) {
-        this.status = status;
-    }
-
-    public Show getCurrentShow() {
-        return currentShow;
-    }
-
-    public void setCurrentShow(Show currentShow) {
-        this.currentShow = currentShow;
-    }
 }

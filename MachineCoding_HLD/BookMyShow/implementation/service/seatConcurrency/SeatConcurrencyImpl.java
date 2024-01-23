@@ -9,8 +9,8 @@ public class SeatConcurrencyImpl implements SeatConcurrency{
     Map<String,Integer> mock_redis = new ConcurrentHashMap<>(); /* Hashmap will give wrong answer here */
 
     @Override
-    public Boolean lock(int seatNo, int hallNo) {
-        String redisKey = Utils.joinKey(seatNo,hallNo);
+    public Boolean lock(int seatNo, int showSlot) {
+        String redisKey = Utils.joinKey(seatNo,showSlot);
         AtomicReference<Boolean> isLock = new AtomicReference<>(false);
             mock_redis.computeIfAbsent(redisKey, (key)->{
                 isLock.set(true);
@@ -20,8 +20,8 @@ public class SeatConcurrencyImpl implements SeatConcurrency{
         }
 
     @Override
-    public Boolean unLock(int seatNo, int hallNo) {
-        String redisKey = Utils.joinKey(seatNo,hallNo);
+    public Boolean unLock(int seatNo, int showSlot) {
+        String redisKey = Utils.joinKey(seatNo,showSlot);
         if(mock_redis.containsKey(redisKey)){
             mock_redis.remove(redisKey);
             return true;

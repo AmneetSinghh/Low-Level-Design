@@ -1,15 +1,16 @@
 package MachineCoding_HLD.BookMyShow.implementation.service.bookingChargeDecorator;
 
-import MachineCoding_HLD.BookMyShow.implementation.model.Show;
+import MachineCoding_HLD.BookMyShow.implementation.model.Seat;
 
 public class ShowTypeCharge extends BaseBookingChargeImpl {
     public ShowTypeCharge(BaseBookingCharge baseBookingCharge){
         this.baseBookingCharge = baseBookingCharge;
     }
+
     @Override
-    public int calculateAmount(Show show, int seatNo, int hallNo) {
+    public int calculateAmount(Seat seat) {
         int price = 0;
-        switch (show.getShowType()){
+        switch (seat.getShowSlot().getShow().getShowType()){
             case TWO_D : {
                 price = 100;
             }
@@ -20,6 +21,6 @@ public class ShowTypeCharge extends BaseBookingChargeImpl {
                 price = 300;
             }
         }
-        return baseBookingCharge.calculateAmount(show,seatNo,hallNo) + price;
+        return baseBookingCharge.calculateAmount(seat) + price;
     }
 }

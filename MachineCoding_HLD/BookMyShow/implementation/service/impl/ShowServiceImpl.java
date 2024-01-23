@@ -27,16 +27,9 @@ public class ShowServiceImpl implements ShowService {
         Show show = new Show();
         show.setId(id);
         show.setShowType(ShowType.TWO_D);
-        show.setStartAt(System.currentTimeMillis()- (2 * 60 * 60 * 1000));
         show.setEndAt(System.currentTimeMillis() + (2 * 60 * 60 * 1000));
         show.setMovie(movieService.getById(movieId));
         Cinema cinema = cinemaService.getCinemaById(1);
-        if(id%2==0){
-            show.setHall(cinema.getHallList().get(0));
-        }
-        else{
-            show.setHall(cinema.getHallList().get(1));
-        }
         show.setCinema(cinema);
         repository.add(show);
     }
@@ -60,6 +53,11 @@ public class ShowServiceImpl implements ShowService {
             cinemashowMap.computeIfAbsent(show.getCinema(),k-> new ArrayList<>()).add(show);
         }
         return cinemashowMap;
+    }
+
+    @Override
+    public Map<Long, List<Show>> getShowByDate() {
+        return null;
     }
 
     public Show getShowById(int id){
