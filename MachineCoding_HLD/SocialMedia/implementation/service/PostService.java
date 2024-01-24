@@ -9,10 +9,12 @@ implementation :
 
 List<Post> posts; contain all posts.
 
+when post is created, it is added to feed of each of its connections & followers.
+Condition : If membera follows memberb then only he will see posts, with respect of connection accepted or not.
  */
 public interface PostService {
 
-    void addPost(Member member);    //
+    void addPost(Member member);
     void editPost(Member member);
     void deletePost(Member member);
 

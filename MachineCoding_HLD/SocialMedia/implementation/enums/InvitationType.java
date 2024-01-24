@@ -1,5 +1,5 @@
 package MachineCoding_HLD.SocialMedia.implementation.enums;
 
-public enum ConnectionStatus {
-    ACCEPT, REJECT, PENDING
+public enum InvitationType {
+    RECEIVE, SENT
 }

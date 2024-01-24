@@ -11,4 +11,9 @@ public class CompanyPage {
     private List<Job> jobPostings;
     private List<Member> memberList;
     private List<Post> postList;
+    private List<Follower> followerList;
 }
+
+/*
+ *
+ */

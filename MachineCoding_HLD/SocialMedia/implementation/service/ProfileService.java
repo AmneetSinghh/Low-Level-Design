@@ -1,6 +1,8 @@
 package MachineCoding_HLD.SocialMedia.implementation.service;
 
+import MachineCoding_HLD.SocialMedia.implementation.model.profile.Member;
 import MachineCoding_HLD.SocialMedia.implementation.model.profile.Profile;
+import MachineCoding_HLD.SocialMedia.implementation.model.profile.ProfileStats;
 
 public interface ProfileService {
     void addBasicProfile();
@@ -11,4 +13,5 @@ public interface ProfileService {
     void addExperience(int profileId);
     void addSkills(int profileId);
     Profile getById(int profileId);
+    ProfileStats getProfileStat(Member member);
 }
