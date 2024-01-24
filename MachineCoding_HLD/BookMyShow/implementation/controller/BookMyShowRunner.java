@@ -1,6 +1,7 @@
 package MachineCoding_HLD.BookMyShow.implementation.controller;
 
 /*
+
 DB SCHEMA:
 
 - (audi - show)
@@ -31,7 +32,6 @@ tables  lets consider later.
 
 
  - easily extendable to Event Booking service lets design on separate module.
-
 
 - determine time for each ML & LLD, set it on your calender in 1 week 2 LLD.
 
