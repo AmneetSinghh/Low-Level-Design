@@ -1,0 +1,54 @@
+Bank ( transactional management system ) Low level design
+
+1. allow users to create accounts via phonenumber and password
+2. allow users to update their profiles
+3. send money to another user of application ( send to another phone number )
+4. send money to a bank account
+5. allow users to make payment for the transaction via card/upi/netbanking
+6. transaction history details page of a user.
+7. transaction details page of user.
+8. check balance.
+9. multiple ways to send money from x to y, via different methods.
+
+solution :
+
+- Start with simple
+- features:
+
+- signup
+- login
+- send money
+- check balance - wallet/account
+- add/remove money to wallet
+- check history
+
+
+
+ --- - -- - - - - --- - -- - - - ---- - -- - - - ---- - -- - - - ---- - -- - - - ---- - -- - - - ---- - -- - - - ---- - -- - - - -
+
+Payment app ( PhonePe )
+
+requirements :
+
+- register/sign-in
+- add bank details
+- kyc
+- transaction history
+- transaction details
+- wallet
+- do payment  (  QR code )
+
+
+
+clarification questions ( limited time ):
+- max amount of money transfer allowed
+- should we allow to retry of transactions
+- single payment - multiple transactions
+    - fullfillment entity - nexus transactions
+- payment instruments ( gift-card, wallet, bank account )
+- unit ( entities , send money, receive money, nexus transction, mandate transction etc )
+
+
+table name :
+- transactionId globalPaymentId payment-instruments paymentreference ( send money/receive money)
+-
