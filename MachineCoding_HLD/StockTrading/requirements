@@ -1,0 +1,6 @@
+- customer can buy/sell stocks
+- see portfolio-> (holdings -> stock pricing)
+- can have multiple watchlists containing multiple stock quotes.
+- Users should be able to place stock trade orders of the following types: 1) market 2) limit order.
+- Users can have multiple ‘lots’ of a stock. This means that if a user has bought a stock multiple times, the system should be able to differentiate between different lots of the same stock.
+- Users should be able to deposit and withdraw money either via check, wire, or electronic bank transfer.
