@@ -1,0 +1,17 @@
+
+
+
+https://github.com/gopalbala/cric-score/tree/master
+https://github.com/vinay-64/Cricbuzz-LLD/tree/master
+
+example cricbuzz : https://www.cricbuzz.com/live-cricket-scores/83057/bol-vs-nwest-25th-match-csa-four-day-series-division-one-2023-24
+
+1. each match has innings.
+2. innings has teams
+3. teams has players.
+4. pleayers has their past history score tracks.
+5. each player have current match_inning scoreboard.
+6. leaderBoard is scorecard class
+7. innings have overs.
+8. overs have balls
+9/ balls have wickets & runs...
