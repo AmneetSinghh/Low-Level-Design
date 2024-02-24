@@ -35,8 +35,5 @@ public class OrderTransaction {
  u2 sell s1 unit = 23  , price = 50
  u3 sell s1 unit = 90 , price = 26
  u2 sell s1 unit = 20   , price = 19
-
-
-
  stock units in database : 2000
  */
