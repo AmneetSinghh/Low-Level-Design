@@ -4,6 +4,7 @@ import MachineCoding_HLD.BookMyShow.implementation.enums.SeatType;
 
 /*
 input : show_slot_id,
+// seat will not contain any logical entity example show.
 */
 
 public class Seat {

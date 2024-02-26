@@ -1,5 +1,4 @@
 package MachineCoding_HLD.SocialMedia.implementation.model.profile;
-import MachineCoding_HLD.SocialMedia.implementation.model.profile.Profile;
 
 public class Member {
     private int id;

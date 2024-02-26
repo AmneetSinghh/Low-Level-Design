@@ -27,10 +27,10 @@ public class Repository {
         return uniqueInstance;
     }
 
-    List<Customer> customerList = new ArrayList<>();
+    List<Customer> customerList = new ArrayList<>();                // it is a customer table.
     List<Seat> seatList = new ArrayList<>();
     List<Hall> hallList = new ArrayList<>();
-    List<Cinema> cinemaList = new ArrayList<>();
+    List<Cinema> cinemaList = new ArrayList<>();//
     List<Movie> movieList = new ArrayList<>();
     List<Show> showList = new ArrayList<>();
     List<Booking> bookingList = new ArrayList<>();

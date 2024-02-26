@@ -1,0 +1,30 @@
+1. actor -> admin , customers, partners etc.
+2. Train/Bus/Hotel/taxi/flight/
+3. Travel packages, holidays itinerary.
+4. login -> search for train
+5. select train ( enter passenger info - seat type preference ) -> payment.
+6. tickets.
+7. Implement for trains, but solution should be extendable to bus/txi etc.
+8.
+
+
+
+
+IRCTC :
+Trains
+TrainJourney :  is searchable entity,  : search -> source-destination, time, train
+
+
+
+
+
+payment gateway:
+phonePe
+razorpay
+paytm
+
+---------
+
+creditCard payment
+upi payment
+netBanking payment

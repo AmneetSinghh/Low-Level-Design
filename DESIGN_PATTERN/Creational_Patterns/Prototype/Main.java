@@ -11,7 +11,8 @@ public class Main {
 
         /*
         * Don't know concrete class, but we are cloning.
-        * clone complex objects by just .getclone() no need to do setting and getting
+        * clone complex objects by just .getClone() no need to do setting and getting
+        * complex objects creation is already tested, so do make copying means code maintainability and modularity.
         *
         * */
         for(Shape shape: shapeList){
@@ -71,6 +72,7 @@ class Rectangle extends Shape{
     public Rectangle(){
 
     }
+
     public Rectangle(Rectangle source) {
         super(source);
         this.width = source.width;
@@ -88,6 +90,7 @@ class Circle extends Shape{
     public Circle(){
 
     }
+
     public Circle(Circle source) {
         super(source);
         this.radius = source.radius;
