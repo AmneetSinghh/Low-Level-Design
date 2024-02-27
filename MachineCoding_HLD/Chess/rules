@@ -1,0 +1,69 @@
+---- rules of chess ------
+
+pawns :
+    move : first move-> go 2 forward, others only 1 forward.
+    capture : diagonally 1 move forward.
+    - if pawn reaches end of board, promote it to either : queen, rook, bishop or knight;
+
+bishop :
+    - Bishops cannot jump over other pieces.
+    move : Because the bishop moves diagonally, it may never move to a different color other than the one it starts on.
+    - Bishops can only capture one piece per turn.
+
+knight :
+    - it is the only piece that can hop or jump over another piece
+    move : L shaped, 2 forward in some(L,R,T,B) direction  then 1 in alternate direction.
+
+
+  - - - - - - - -
+  - - R - R - - -
+  - R - - - R - -
+  - - - K - - - -
+  - R - - - R - -
+  - - R - R - - -
+
+
+rooks :
+    - move : U, D, any numbers moves in these directions.
+
+
+
+queen :
+    - move : L, R, U, D, top_left_diagonal, top_right_diagonal , bottom_left_diagonal , bottom_right_diagonal any numbers moves in these directions.
+
+
+king :
+    - L, R, U, D, top_left_diagonal, top_right_diagonal , bottom_left_diagonal , bottom_right_diagonal only 1 move
+
+
+points :
+
+- Pawn	    1
+- Knight	3
+- Bishop	3
+- Rook	    5
+- Queen	    9
+
+
+how to play :
+    - before making a move of X piece, check if you want to capture Y , who is defending that piece.
+    - losing more points by a piece and gaining less points is bad idea.
+
+
+check-mate :
+    - check means when we make a move of piece X, &  king is in danger ( see can see king)
+    - checkmate means : if we made check, then king has no position to go ,becuase every position in our vision alreayd, then checkmate. (WINNER)
+
+stale move : ( draw )
+    - when one's player king is trapped, but its not in check & that player has no other pieces to move.
+    - stalemate is a draw and usually it happens by accident, one player is completely dominating other player. instead of checkmate he did stalemate.
+    - always occur end of the game.
+    - king trapped means, whichever potions king will go it is in threat, so its called stalemate. As we are not allowed to make king is in danger
+example :
+
+  - K - - - - - -
+  - - - - - - - -
+  R - Q - - - - -
+  - - - - - - - -
+  - - - - - - - -
+  - - - - - - - -
