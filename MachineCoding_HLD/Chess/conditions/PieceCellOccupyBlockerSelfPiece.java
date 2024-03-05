@@ -22,4 +22,3 @@ public class PieceCellOccupyBlockerSelfPiece implements PieceCellOccupyBlocker {
 }
 
 
-// two player moves chess.

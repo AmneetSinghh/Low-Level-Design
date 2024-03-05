@@ -21,8 +21,8 @@ public class MessageRegistory {
 
     private void register(MessagingType type){
         switch (type){
-            case EMAIL -> messageServiceRegistory.put(type,new EmailServcie());
-            case WHATSAPP -> messageServiceRegistory.put(type,new EmailServcie());
+            case EMAIL : messageServiceRegistory.put(type,new EmailServcie());
+            case WHATSAPP : messageServiceRegistory.put(type,new EmailServcie());
         }
     }
 

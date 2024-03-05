@@ -1,0 +1,74 @@
+/*
+ * 
+ * In a group if we have 100 friends, then we went to party everybody added their expences so there will be 1000 of transactions, like I have to give money to 100 friends a little amount.
+ * So simplify debt algo, just reduce the number of debts/transactions.
+ * 
+ */
+
+
+
+public class OptimalAccountingBalance {
+
+    public int minTransfers(int[][] transactions) {
+
+        Map<Integer, Integer> memberVsBalance = new HashMap<>();
+        //compute the overall balance (Incoming - Outgoing) for each member
+        for (int[] txn : transactions) {
+            int from = txn[0];// A    : give amount to B
+            int to = txn[1];//   B    : recieve amount from A
+            int amount = txn[2];
+            memberVsBalance.put(from, memberVsBalance.getOrDefault(from, 0) - amount);// A    : give amount to B
+            memberVsBalance.put(to, memberVsBalance.getOrDefault(to, 0) + amount);//   B    : recieve amount from A
+        }
+
+        List<Integer> balances = new ArrayList<>();
+        for (int amount : memberVsBalance.values()) {
+            // remove 0's because they are already settled.
+            if(amount != 0) {
+                balances.add(amount);
+            }
+        }
+        return findMinimumTxns(balances, 0);// dfs will give us minimum number of transactions.  So logic is
+
+
+        /*
+        positive - giver,   negative : reciever,     just cut- one positive and negative,
+         * 70 -100 200 -60 202 282 -29 -5
+         */
+    }
+
+    private int findMinimumTxns(List<Integer> balances, int currentIndex) {
+
+        if(balances.size() == 0 || currentIndex >= balances.size()) return 0;
+
+        int currentVal = balances.get(currentIndex);
+        if(currentVal == 0) {
+            return findMinimumTxns(balances, currentIndex+1);
+        }
+
+        int minTxnCount = Integer.MAX_VALUE;
+        for(int txnIndex = currentIndex+1; txnIndex<balances.size(); txnIndex++){
+            int nextVal = balances.get(txnIndex);
+            if(currentVal * nextVal < 0) {
+                balances.set(txnIndex, currentVal + nextVal);
+                minTxnCount = Math.min(minTxnCount, 1 + findMinimumTxns(balances, currentIndex + 1));
+                balances.set(txnIndex, nextVal);
+
+                if(currentVal + nextVal == 0){
+                    break;
+                }
+            }
+        }
+        return minTxnCount;// These are the min of transactions that the persons have to do.
+    }
+
+    public static void main(String args[]) {
+
+        OptimalAccountingBalance minTxnsObj = new OptimalAccountingBalance();
+       // int[][] txns = {{0, 1, 10}, {1, 0, 1}, {1, 2, 5}, {2, 0, 5}};
+        int[][] txns = {{0, 1, 10}, {2, 0, 5}};
+
+        int output = minTxnsObj.minTransfers(txns);
+        System.out.println(output);
+    }
+}

@@ -13,6 +13,8 @@ public class ExpenseController {
         ExpenseSplit expenseSplit = SplitFactory.getSplitObject(splitType);// get the type of expense
         expenseSplit.validateSplitRequest(splitDetails, expenseAmount);// validate the expense is correct or not.
 
+        // may be no needed for validation.
+
         Expense expense = new Expense(expenseId, expenseAmount, description, paidByUser, splitType, splitDetails);// create a expense
 
         balanceSheetController.updateUserExpenseBalanceSheet(paidByUser, splitDetails, expenseAmount);// update expense for each user;.

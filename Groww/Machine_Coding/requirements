@@ -1,0 +1,28 @@
+
+Students login
+I can see my marks
+Teacher logs in
+they can enter marks of subjects and end semester exams
+I can ask for corrections
+I can choose subjects at year start
+every year has 2 exams
+every teach teaches n subjects
+there are some m teachers
+there are some whatever many subjects
+Teachers should be able to update and edit, marks of their subjects
+for a student who is enrolled for that subject
+i have view my report card
+
+
+
+
+-------------------------------------------------------------------------------------------------------------------------
+
+
+- teacher & students can login
+- student can enroll into subject.
+- teacher can teach M subjects.
+- 1 year M exams can happen for X subjects, teacher should upload all marks of M students & X subjects into this portal
+- teachers should be able to update and edit, marks of their subjects
+- student can see 1 report card for exam.
+

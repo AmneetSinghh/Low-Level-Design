@@ -1,0 +1,17 @@
+Design Splitwise :
+
+Add/remove user
+Create/remove groups
+Split expenses equally
+Do group expenses with specific members
+Code should be scalable such that if we want to implement custom split expenses, we can add without hassle.
+Settle expenses user to user and user to group
+show balances for all user
+
+
+
+
+
+                                                            entities :
+--------------------------------------------------------------------------------------------------------------------------------
+
