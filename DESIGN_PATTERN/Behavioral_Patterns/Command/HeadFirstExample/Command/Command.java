@@ -1,4 +1,4 @@
-package DESIGN_PATTERN.Behavioral_Patterns.Command.HeadFirstExample.Command;
+package design_pattern.Behavioral_Patterns.Command.HeadFirstExample.Command;
 
 public interface Command {
     public void execute();

@@ -3,10 +3,10 @@ package MachineCoding_HLD.BookMyShow.implementation.service.impl;
 import MachineCoding_HLD.BookMyShow.implementation.data.Repository;
 import MachineCoding_HLD.BookMyShow.implementation.model.Cinema;
 import MachineCoding_HLD.BookMyShow.implementation.model.Hall;
-import MachineCoding_HLD.BookMyShow.implementation.model.Seat;
 import MachineCoding_HLD.BookMyShow.implementation.model.Show;
 import MachineCoding_HLD.BookMyShow.implementation.service.CinemaService;
 import MachineCoding_HLD.BookMyShow.implementation.service.SeatService;
+
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;

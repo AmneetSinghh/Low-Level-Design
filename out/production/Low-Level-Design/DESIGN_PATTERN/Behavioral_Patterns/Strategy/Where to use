@@ -1,5 +1,0 @@
-1. Identify the aspects of your application that vary and separate them from what stays the same.  (seperate them then use them using composition)
-2. We use composition for above case, so We pass behavior in runtime using constructor invocation.
-3. Expose only interfaces to outer world, because with interfaces we can only expose the functions that we want the outer world to use.
-4. With interface exposing our code is well abstracted, client don't know about internal details.
-

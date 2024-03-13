@@ -1,8 +1,8 @@
-package DESIGN_PATTERN.Behavioral_Patterns.Observer;
+package design_pattern.Behavioral_Patterns.Observer;
+
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
-import java.util.Map;
 
 // publish subscriber pattern.
 // subject is file : State is open, close, delte, read

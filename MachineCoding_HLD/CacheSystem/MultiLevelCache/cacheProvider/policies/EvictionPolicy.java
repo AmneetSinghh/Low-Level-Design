@@ -1,4 +1,4 @@
-package MachineCoding_HLD.CacheSystem.Cache.policies;
+package MachineCoding_HLD.CacheSystem.MultiLevelCache.cacheProvider.policies;
 
 public interface EvictionPolicy<Key> {
 

@@ -1,9 +1,9 @@
 package MachineCoding_HLD.CacheSystem.Cache;
 
-import MachineCoding_HLD.CacheSystem.Cache.policies.EvictionPolicy;
-import MachineCoding_HLD.CacheSystem.Cache.storage.Storage;
 import MachineCoding_HLD.CacheSystem.Cache.exceptions.NotFoundException;
 import MachineCoding_HLD.CacheSystem.Cache.exceptions.StorageFullException;
+import MachineCoding_HLD.CacheSystem.Cache.policies.EvictionPolicy;
+import MachineCoding_HLD.CacheSystem.Cache.storage.Storage;
 
 public class Cache<Key, Value> {
     private final EvictionPolicy<Key> evictionPolicy;
@@ -41,5 +41,8 @@ public class Cache<Key, Value> {
         }
     }
 
+    public double getCurrentUsage(){
+        return storage.getCapacity();
+    }
 
 }

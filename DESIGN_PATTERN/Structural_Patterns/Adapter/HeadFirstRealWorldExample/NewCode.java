@@ -1,4 +1,4 @@
-package DESIGN_PATTERN.Structural_Patterns.Adapter.HeadFirstRealWorldExample;
+package design_pattern.Structural_Patterns.Adapter.HeadFirstRealWorldExample;
 
 public class NewCode {
         public static void main(String args[]){

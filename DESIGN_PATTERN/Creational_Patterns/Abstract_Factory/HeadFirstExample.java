@@ -1,4 +1,4 @@
-package DESIGN_PATTERN.Creational_Patterns.Abstract_Factory;
+package design_pattern.Creational_Patterns.Abstract_Factory;
 
 import java.util.ArrayList;
 import java.util.List;

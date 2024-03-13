@@ -1,6 +1,6 @@
-package MachineCoding_HLD.CacheSystem.Cache.policies;
+package MachineCoding_HLD.CacheSystem.MultiLevelCache.cacheProvider.policies;
 
-public class LRUUsingArraysEvictionPolicy implements EvictionPolicy{
+public class LRUUsingArraysEvictionPolicy implements EvictionPolicy {
     @Override
     public void keyAccessed(Object o) {
 

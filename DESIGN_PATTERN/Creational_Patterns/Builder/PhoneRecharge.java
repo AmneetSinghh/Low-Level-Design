@@ -1,7 +1,4 @@
-package DESIGN_PATTERN.Creational_Patterns.Builder;
-
-import java.util.ArrayList;
-import java.util.List;
+package design_pattern.Creational_Patterns.Builder;
 
 public class PhoneRecharge {
     private String fulfillReference;

@@ -2,6 +2,7 @@ package MachineCoding_HLD.IRCTC.model.journey;
 
 import MachineCoding_HLD.IRCTC.enums.TrainJourneyStatus;
 import MachineCoding_HLD.IRCTC.model.transport.Train;
+
 import java.util.UUID;
 
 public class TrainJourney {

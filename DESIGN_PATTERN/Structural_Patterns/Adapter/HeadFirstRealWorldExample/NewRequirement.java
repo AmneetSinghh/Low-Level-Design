@@ -1,4 +1,4 @@
-package DESIGN_PATTERN.Structural_Patterns.Adapter.HeadFirstRealWorldExample;
+package design_pattern.Structural_Patterns.Adapter.HeadFirstRealWorldExample;
 
 // you can see we didn't changed anything who uses the duck functions.
 // we just made the adapter, and we just changed the object creation.

@@ -1,4 +1,4 @@
-package DESIGN_PATTERN.Behavioral_Patterns.Command;
+package design_pattern.Behavioral_Patterns.Command;
 // see head first example if you want to save the history of commands. we can do that use invoker.
 public class RefractoringGuruExample {
     public static void main(String args[]){

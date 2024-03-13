@@ -1,7 +1,7 @@
-package DESIGN_PATTERN.Behavioral_Patterns.Command.HeadFirstExample.ConcreteCommand;
+package design_pattern.Behavioral_Patterns.Command.HeadFirstExample.ConcreteCommand;
 
-import DESIGN_PATTERN.Behavioral_Patterns.Command.HeadFirstExample.Command.Command;
-import DESIGN_PATTERN.Behavioral_Patterns.Command.HeadFirstExample.Receiver.CeilingFan;
+import design_pattern.Behavioral_Patterns.Command.HeadFirstExample.Command.Command;
+import design_pattern.Behavioral_Patterns.Command.HeadFirstExample.Receiver.CeilingFan;
 
 public class CeilingFanHighCommand implements Command {
     CeilingFan ceilingFan;

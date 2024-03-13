@@ -1,7 +1,7 @@
-package DESIGN_PATTERN.Behavioral_Patterns.Command.HeadFirstExample.Invoker;
+package design_pattern.Behavioral_Patterns.Command.HeadFirstExample.Invoker;
 
-import DESIGN_PATTERN.Behavioral_Patterns.Command.HeadFirstExample.Command.Command;
-import DESIGN_PATTERN.Behavioral_Patterns.Command.HeadFirstExample.ConcreteCommand.NoCommand;
+import design_pattern.Behavioral_Patterns.Command.HeadFirstExample.Command.Command;
+import design_pattern.Behavioral_Patterns.Command.HeadFirstExample.ConcreteCommand.NoCommand;
 
 public class RemoteControl {
     Command[] onCommands;

@@ -1,6 +1,5 @@
 package MachineCoding_HLD.BookMyShow.implementation.service.impl;
 
-import MachineCoding_HLD.BookMyShow.implementation.data.Repository;
 import MachineCoding_HLD.BookMyShow.implementation.model.Seat;
 import MachineCoding_HLD.BookMyShow.implementation.model.Ticket;
 import MachineCoding_HLD.BookMyShow.implementation.service.SeatService;

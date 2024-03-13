@@ -1,6 +1,4 @@
-package DESIGN_PATTERN.Creational_Patterns.Builder;
-
-import java.util.UUID;
+package design_pattern.Creational_Patterns.Builder;
 
 public class HouseMain {
     public void method(){

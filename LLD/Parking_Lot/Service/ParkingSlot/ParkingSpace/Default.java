@@ -1,8 +1,8 @@
 package LLD.Parking_Lot.Service.ParkingSlot.ParkingSpace;
 
-import java.util.List;
-
 import LLD.Parking_Lot.Models.ParkingSlot.IParkingSlot;
+
+import java.util.List;
 
 public class Default implements IParkingSpace{
     @Override

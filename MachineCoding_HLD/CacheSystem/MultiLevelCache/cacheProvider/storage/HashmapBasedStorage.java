@@ -1,7 +1,7 @@
-package MachineCoding_HLD.CacheSystem.Cache.storage;
+package MachineCoding_HLD.CacheSystem.MultiLevelCache.cacheProvider.storage;
 
-import MachineCoding_HLD.CacheSystem.Cache.exceptions.NotFoundException;
-import MachineCoding_HLD.CacheSystem.Cache.exceptions.StorageFullException;
+import MachineCoding_HLD.CacheSystem.MultiLevelCache.cacheProvider.exceptions.NotFoundException;
+import MachineCoding_HLD.CacheSystem.MultiLevelCache.cacheProvider.exceptions.StorageFullException;
 
 import java.util.HashMap;
 import java.util.Map;

@@ -1,4 +1,4 @@
-package MachineCoding_HLD.CacheSystem.Cache.algorithms;
+package MachineCoding_HLD.CacheSystem.MultiLevelCache.cacheProvider.algorithms;
 
 
 public class DoublyLinkedListNode<E> {

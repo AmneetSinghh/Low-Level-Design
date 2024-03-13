@@ -1,5 +1,6 @@
-package MachineCoding_HLD.CacheSystem.Cache.algorithms;
-import MachineCoding_HLD.CacheSystem.Cache.exceptions.InvalidElementException;
+package MachineCoding_HLD.CacheSystem.MultiLevelCache.cacheProvider.algorithms;
+import MachineCoding_HLD.CacheSystem.MultiLevelCache.cacheProvider.exceptions.InvalidElementException;
+
 import java.util.NoSuchElementException;
 
 /*

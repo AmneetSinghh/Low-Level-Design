@@ -1,4 +1,4 @@
-package DESIGN_PATTERN.Creational_Patterns.Builder;
+package design_pattern.Creational_Patterns.Builder;
 
 public class House {
     String roof;

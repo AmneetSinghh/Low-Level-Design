@@ -1,4 +1,4 @@
-package DESIGN_PATTERN.Behavioral_Patterns.Visitor;
+package design_pattern.Behavioral_Patterns.Visitor;
 import java.util.ArrayList;
 import java.util.List;
 

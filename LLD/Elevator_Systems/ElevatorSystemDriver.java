@@ -1,12 +1,9 @@
 package LLD.Elevator_Systems;
 
-import javax.print.attribute.standard.OrientationRequested;
-
 import LLD.Elevator_Systems.models.ElevatorDirection;
 import LLD.Elevator_Systems.models.ElevatorRequest;
 import LLD.Elevator_Systems.service.*;
 
-import java.time.Period;
 import java.util.ArrayList;
 import java.util.List;
 

@@ -37,4 +37,8 @@ public class HashmapBasedStorage<Key, Value> implements Storage<Key, Value> {
     private boolean isStorageFull() {
         return storage.size() == capacity;
     }
+
+    public double getCapacity(){
+        return this.capacity;
+    }
 }

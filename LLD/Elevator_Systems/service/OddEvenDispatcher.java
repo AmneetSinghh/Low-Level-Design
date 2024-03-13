@@ -1,9 +1,8 @@
 package LLD.Elevator_Systems.service;
 
-import java.util.List;
-
-import LLD.Elevator_Systems.models.ElevatorDirection;
 import LLD.Elevator_Systems.models.ElevatorRequest;
+
+import java.util.List;
 
 
 

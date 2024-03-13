@@ -1,7 +1,5 @@
 package MachineCoding_HLD.BookMyShow.implementation.model;
 
-import MachineCoding_HLD.BookMyShow.implementation.enums.HallStatus;
-
 /*
  * All information about this hall.
  */

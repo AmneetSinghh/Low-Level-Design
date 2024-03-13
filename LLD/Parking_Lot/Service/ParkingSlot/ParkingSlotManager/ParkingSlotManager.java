@@ -1,10 +1,10 @@
 package LLD.Parking_Lot.Service.ParkingSlot.ParkingSlotManager;
-import java.util.List;
-import java.util.logging.Logger;
+
 import LLD.Parking_Lot.Models.ParkingSlot.IParkingSlot;
 import LLD.Parking_Lot.Models.Vehicle.Vehicle;
-import LLD.Parking_Lot.Models.Vehicle.VehicleType;
 import LLD.Parking_Lot.Service.ParkingSlot.ParkingSpace.IParkingSpace;
+
+import java.util.List;
 
 /*
 TODO :

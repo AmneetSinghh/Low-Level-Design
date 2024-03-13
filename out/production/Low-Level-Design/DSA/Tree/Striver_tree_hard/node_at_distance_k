@@ -1,3 +1,0 @@
-// bfs appraoch
- // mark the parent of each node.
- // then do simple bfs from the target node and keep visited array because we can reach the same node twice.

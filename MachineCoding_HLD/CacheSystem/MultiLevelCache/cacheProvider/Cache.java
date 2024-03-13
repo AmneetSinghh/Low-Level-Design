@@ -1,9 +1,9 @@
-package MachineCoding_HLD.CacheSystem.Cache;
+package MachineCoding_HLD.CacheSystem.MultiLevelCache.cacheProvider;
 
-import MachineCoding_HLD.CacheSystem.Cache.policies.EvictionPolicy;
-import MachineCoding_HLD.CacheSystem.Cache.storage.Storage;
-import MachineCoding_HLD.CacheSystem.Cache.exceptions.NotFoundException;
-import MachineCoding_HLD.CacheSystem.Cache.exceptions.StorageFullException;
+import MachineCoding_HLD.CacheSystem.MultiLevelCache.cacheProvider.exceptions.NotFoundException;
+import MachineCoding_HLD.CacheSystem.MultiLevelCache.cacheProvider.exceptions.StorageFullException;
+import MachineCoding_HLD.CacheSystem.MultiLevelCache.cacheProvider.policies.EvictionPolicy;
+import MachineCoding_HLD.CacheSystem.MultiLevelCache.cacheProvider.storage.Storage;
 
 public class Cache<Key, Value> {
     private final EvictionPolicy<Key> evictionPolicy;

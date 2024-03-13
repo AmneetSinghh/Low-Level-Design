@@ -1,0 +1,12 @@
+1. Level cache follows chain-of-responsibility
+    - each level has their own responsiblity, just we need to add levels in a chain.
+    -
+
+
+
+Good Design practices :
+
+1. Use heavy composition
+2. For removing null checks, make class, that has nullClass which will have response if something null
+3. make use final where we don't want the variable to change once after initilized ( immutable things )
+4. make every varaible FINAL and do use @nonNull annotations.

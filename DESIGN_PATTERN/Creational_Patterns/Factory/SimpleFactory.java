@@ -1,4 +1,4 @@
-package DESIGN_PATTERN.Creational_Patterns.Factory;
+package design_pattern.Creational_Patterns.Factory;
 
 // EXAMPLE OF FACTORY METHOD.
 public class SimpleFactory {

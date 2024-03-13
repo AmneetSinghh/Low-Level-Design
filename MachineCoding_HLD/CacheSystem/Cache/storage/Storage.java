@@ -10,4 +10,6 @@ public interface Storage<Key, Value> {
     void remove(Key key) throws NotFoundException;
 
     Value get(Key key) throws NotFoundException;
+
+    double getCapacity();
 }

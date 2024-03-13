@@ -1,4 +1,4 @@
-package DESIGN_PATTERN.Creational_Patterns.Singleton;
+package design_pattern.Creational_Patterns.Singleton;
 
 import java.util.concurrent.locks.Lock;
 import java.util.concurrent.locks.ReentrantLock;

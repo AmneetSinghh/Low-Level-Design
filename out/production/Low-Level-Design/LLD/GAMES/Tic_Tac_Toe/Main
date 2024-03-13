@@ -1,9 +1,0 @@
-
-public class Main {
-
-    public static void main(String args[]) {
-        TicTacToeGame game = new TicTacToeGame();
-        game.initializeGame();// so first initilize the game
-        System.out.println("game winner is: " + game.startGame());// then start the game.
-    }
-}

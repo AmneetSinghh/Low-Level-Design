@@ -1,8 +1,8 @@
-package MachineCoding_HLD.CacheSystem.Cache.storage;
+package MachineCoding_HLD.CacheSystem.MultiLevelCache.cacheProvider.storage;
 
 
-import MachineCoding_HLD.CacheSystem.Cache.exceptions.NotFoundException;
-import MachineCoding_HLD.CacheSystem.Cache.exceptions.StorageFullException;
+import MachineCoding_HLD.CacheSystem.MultiLevelCache.cacheProvider.exceptions.NotFoundException;
+import MachineCoding_HLD.CacheSystem.MultiLevelCache.cacheProvider.exceptions.StorageFullException;
 
 public interface Storage<Key, Value> {
     public void add(Key key, Value value) throws StorageFullException;

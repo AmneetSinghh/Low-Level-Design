@@ -1,6 +1,7 @@
 //https://refactoring.guru/design-patterns/strategy
-package DESIGN_PATTERN.Behavioral_Patterns.Strategy;
-import java.util.*;
+package design_pattern.Behavioral_Patterns.Strategy;
+
+import java.util.Scanner;
 interface Strategy{
     public void execute(int a, int b);
 }

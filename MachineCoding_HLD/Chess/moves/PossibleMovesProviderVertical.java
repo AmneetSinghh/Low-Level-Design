@@ -8,8 +8,6 @@ import MachineCoding_HLD.Chess.model.Cell;
 import MachineCoding_HLD.Chess.model.Piece;
 import MachineCoding_HLD.Chess.model.player.Player;
 import MachineCoding_HLD.Chess.moves.nextmove.DownMoveProvider;
-import MachineCoding_HLD.Chess.moves.nextmove.LeftMoveProvider;
-import MachineCoding_HLD.Chess.moves.nextmove.RightMoveProvider;
 import MachineCoding_HLD.Chess.moves.nextmove.UpMoveProvider;
 
 import java.util.ArrayList;

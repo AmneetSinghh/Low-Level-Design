@@ -1,2 +1,9 @@
-package MachineCoding_HLD.CacheSystem.MultiLevelCache.model;public class WriteResponse {
+package MachineCoding_HLD.CacheSystem.MultiLevelCache.model;
+import lombok.*;
+
+@ToString
+@AllArgsConstructor
+@Getter
+public class WriteResponse {
+    Double timeTaken;
 }

@@ -1,9 +1,10 @@
 package LLD.Parking_Lot.Service.ParkingSlot.ParkingSlotManager;
 
-import java.util.*;
-
 import LLD.Parking_Lot.Models.Vehicle.VehicleType;
 import LLD.Parking_Lot.Service.ParkingSlot.ParkingSpace.Default;
+
+import java.util.HashMap;
+import java.util.Map;
 
 /*
 See txn Searfch manager class, to get idea what manager classes will do.

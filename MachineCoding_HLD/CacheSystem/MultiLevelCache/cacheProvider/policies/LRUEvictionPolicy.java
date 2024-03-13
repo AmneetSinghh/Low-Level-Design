@@ -1,8 +1,8 @@
-package MachineCoding_HLD.CacheSystem.Cache.policies;
+package MachineCoding_HLD.CacheSystem.MultiLevelCache.cacheProvider.policies;
 
 
-import MachineCoding_HLD.CacheSystem.Cache.algorithms.DoublyLinkedList;
-import MachineCoding_HLD.CacheSystem.Cache.algorithms.DoublyLinkedListNode;
+import MachineCoding_HLD.CacheSystem.MultiLevelCache.cacheProvider.algorithms.DoublyLinkedList;
+import MachineCoding_HLD.CacheSystem.MultiLevelCache.cacheProvider.algorithms.DoublyLinkedListNode;
 
 import java.util.HashMap;
 import java.util.Map;

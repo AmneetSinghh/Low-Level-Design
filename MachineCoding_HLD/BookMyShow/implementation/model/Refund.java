@@ -1,6 +1,5 @@
 package MachineCoding_HLD.BookMyShow.implementation.model;
 
-import MachineCoding_HLD.BookMyShow.implementation.model.user.Customer;
 import MachineCoding_HLD.Hotel_Management_System.Implementation.enums.RefundStatus;
 
 public class Refund {

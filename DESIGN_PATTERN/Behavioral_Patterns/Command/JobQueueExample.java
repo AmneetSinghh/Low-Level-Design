@@ -1,6 +1,4 @@
-package DESIGN_PATTERN.Behavioral_Patterns.Command;
-
-import DESIGN_PATTERN.Behavioral_Patterns.Command.HeadFirstExample.Command.Command;
+package design_pattern.Behavioral_Patterns.Command;
 
 import java.util.LinkedList;
 import java.util.Queue;

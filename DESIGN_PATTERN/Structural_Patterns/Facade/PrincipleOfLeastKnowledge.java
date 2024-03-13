@@ -1,4 +1,4 @@
-package DESIGN_PATTERN.Structural_Patterns.Facade;
+package design_pattern.Structural_Patterns.Facade;
 
 // principle of least knowledge; talk only to your immediate friends.
 public class PrincipleOfLeastKnowledge {

@@ -1,6 +1,6 @@
 package MachineCoding_HLD.Librar_Management_System.Implementation.data;
 
-import MachineCoding_HLD.Librar_Management_System.Implementation.model.*;
+import MachineCoding_HLD.Librar_Management_System.Implementation.model.BookItem;
 
 /*
 Central class which act like DATABASE

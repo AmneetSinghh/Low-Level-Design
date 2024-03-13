@@ -1,11 +1,11 @@
-package DESIGN_PATTERN.Behavioral_Patterns.Command.HeadFirstExample;
+package design_pattern.Behavioral_Patterns.Command.HeadFirstExample;
 
-import DESIGN_PATTERN.Behavioral_Patterns.Command.HeadFirstExample.Command.Command;
-import DESIGN_PATTERN.Behavioral_Patterns.Command.HeadFirstExample.ConcreteCommand.*;
-import DESIGN_PATTERN.Behavioral_Patterns.Command.HeadFirstExample.Invoker.RemoteControl;
-import DESIGN_PATTERN.Behavioral_Patterns.Command.HeadFirstExample.Receiver.CeilingFan;
-import DESIGN_PATTERN.Behavioral_Patterns.Command.HeadFirstExample.Receiver.Light;
-import DESIGN_PATTERN.Behavioral_Patterns.Command.HeadFirstExample.Receiver.Sterio;
+import design_pattern.Behavioral_Patterns.Command.HeadFirstExample.Command.Command;
+import design_pattern.Behavioral_Patterns.Command.HeadFirstExample.ConcreteCommand.*;
+import design_pattern.Behavioral_Patterns.Command.HeadFirstExample.Invoker.RemoteControl;
+import design_pattern.Behavioral_Patterns.Command.HeadFirstExample.Receiver.CeilingFan;
+import design_pattern.Behavioral_Patterns.Command.HeadFirstExample.Receiver.Light;
+import design_pattern.Behavioral_Patterns.Command.HeadFirstExample.Receiver.Sterio;
 
 public class Client {
 

@@ -1,4 +1,4 @@
-package DESIGN_PATTERN.Structural_Patterns.Adapter;
+package design_pattern.Structural_Patterns.Adapter;
 
 // It converts one interface to another.
 public class HeadFirstExample {

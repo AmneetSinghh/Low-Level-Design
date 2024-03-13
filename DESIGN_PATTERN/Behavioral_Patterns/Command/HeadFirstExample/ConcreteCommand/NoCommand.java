@@ -1,6 +1,6 @@
-package DESIGN_PATTERN.Behavioral_Patterns.Command.HeadFirstExample.ConcreteCommand;
+package design_pattern.Behavioral_Patterns.Command.HeadFirstExample.ConcreteCommand;
 
-import DESIGN_PATTERN.Behavioral_Patterns.Command.HeadFirstExample.Command.Command;
+import design_pattern.Behavioral_Patterns.Command.HeadFirstExample.Command.Command;
 
 public class NoCommand implements Command {
     @Override

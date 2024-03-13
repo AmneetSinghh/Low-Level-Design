@@ -1,8 +1,4 @@
 package LLD.Parking_Lot;
-import java.util.ArrayList;
-import java.util.List;
-import java.util.Map;
-// Practice it again bro.
 
 import LLD.Parking_Lot.Models.ParkingSlot.IParkingSlot;
 import LLD.Parking_Lot.Models.ParkingSlot.TwoWheelerParkingSlot;
@@ -12,11 +8,12 @@ import LLD.Parking_Lot.Models.Vehicle.VehicleType;
 import LLD.Parking_Lot.Service.EntryGate.EntryGate;
 import LLD.Parking_Lot.Service.ExitGate.ExitGate;
 import LLD.Parking_Lot.Service.Floor.Floor;
-import LLD.Parking_Lot.Service.ParkingSlot.ParkingSlotManager.FourWheelerManager;
 import LLD.Parking_Lot.Service.ParkingSlot.ParkingSlotManager.ParkingSlotManager;
 import LLD.Parking_Lot.Service.ParkingSlot.ParkingSlotManager.ParkingSpotManagerFactory;
-import LLD.Parking_Lot.Service.ParkingSlot.ParkingSlotManager.TwoWheelerManager;
 import LLD.Parking_Lot.Service.Ticket.TicketParkingSlotMapper;
+
+import java.util.ArrayList;
+import java.util.List;
 
 // refer this code after getting some experience with LLD
 //https://github.com/GauravGuptaDeveloper/ParkingLot

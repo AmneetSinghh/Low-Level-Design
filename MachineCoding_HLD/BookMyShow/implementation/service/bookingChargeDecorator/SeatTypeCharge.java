@@ -1,7 +1,6 @@
 package MachineCoding_HLD.BookMyShow.implementation.service.bookingChargeDecorator;
 
 import MachineCoding_HLD.BookMyShow.implementation.model.Seat;
-import MachineCoding_HLD.BookMyShow.implementation.model.Show;
 import MachineCoding_HLD.BookMyShow.implementation.service.SeatService;
 
 public class SeatTypeCharge extends BaseBookingChargeImpl {

@@ -1,4 +1,4 @@
-package DESIGN_PATTERN.Behavioral_Patterns.Strategy;
+package design_pattern.Behavioral_Patterns.Strategy;
 
 public class DuckExample {
     public static void main(String args[]){

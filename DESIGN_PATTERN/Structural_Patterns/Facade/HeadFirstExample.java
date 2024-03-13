@@ -1,4 +1,4 @@
-package DESIGN_PATTERN.Structural_Patterns.Facade;
+package design_pattern.Structural_Patterns.Facade;
 
 // see the example from HEAD FIRST DESIGN PATTERNS.
 public class HeadFirstExample {
