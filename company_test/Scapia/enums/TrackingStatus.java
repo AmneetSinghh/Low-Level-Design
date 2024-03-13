@@ -1,10 +1,11 @@
 package company_test.Scapia.enums;
 
 public enum TrackingStatus {
+    INITIATED("INITIATED"),
     PICKED("PICKED"),
-    IN_PROGRESS("IN_PROGRESS"),
-    DELIVERED("IN_PROGRESS"),
-    CANCELLED("IN_PROGRESS");
+    PACKED("PACKED"),
+    DELIVERED("DELIVERED"),
+    CANCELLED("CANCELLED");
 
     TrackingStatus(String value) {
 

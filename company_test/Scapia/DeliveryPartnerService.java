@@ -1,5 +1,7 @@
 package company_test.Scapia;
 
+import company_test.Scapia.model.DeliveryPartner;
+
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
