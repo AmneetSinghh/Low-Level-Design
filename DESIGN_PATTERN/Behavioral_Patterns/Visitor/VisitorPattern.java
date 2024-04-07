@@ -5,6 +5,8 @@ import java.util.List;
 /*
  * XmlExport Logic will get segregated from Shape class.
  */
+
+
 public class VisitorPattern {
     public static void main(String args[]){
         List<Shape> list = new ArrayList<>();
@@ -44,6 +46,17 @@ class Dot implements Shape{
     @Override
     public void accept(Visitor visitor) { /* Change the visitors dynamically */
         visitor.visitDot(this);
+        /*
+            multiple ways :
+                 - strategy
+                 - factory + registry pattern.
+
+                 then why we use visitor?
+                 - visitor use in already tested class, with less changes
+                 - in visitor we pass arguments from outside.
+                 - in strategy that different strategies are handled by object himself.
+
+         */
     }
 }
 

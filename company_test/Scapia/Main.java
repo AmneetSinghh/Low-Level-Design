@@ -1,10 +1,5 @@
 package company_test.Scapia;
 
-import company_test.Scapia.model.DeliveryPartner;
-import java.util.HashMap;
-import java.util.Map;
-import java.util.Scanner;
-
 public class Main {
     public static void main(String[] args) {
 

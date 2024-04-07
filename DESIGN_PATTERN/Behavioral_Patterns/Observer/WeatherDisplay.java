@@ -60,6 +60,7 @@ class WeatherData implements Subject {
             obsever.update();
         }
     }
+
     @Override
     public void removeObserver(Observer o) {
         observers.remove(o);

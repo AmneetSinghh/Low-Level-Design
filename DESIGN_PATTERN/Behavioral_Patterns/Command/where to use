@@ -6,9 +6,6 @@ store them inside other objects, switch linked commands at runtime, etc.
 
 
 
-
-
-
 applications :
 1. Runnable interface in java are implemented using command pattern.2
 2. in queeues or task schedulers we can pass standalone objects as commands, then jobScheduler will execute them asynchronously.

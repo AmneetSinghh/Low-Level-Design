@@ -45,6 +45,7 @@ class ClassicSingletonPatternMultithreading{
 
     /*
      If at X time 1000 threads are calling this method, then only one thread can enter this function, so synchronized is slow.
+     - everytime even after object has gotten some value, thread comes, he/she needs to wait for another thread to go out.
      */
     public static synchronized ClassicSingletonPatternMultithreading getInstance(){
         if(uniqueInstance == null){

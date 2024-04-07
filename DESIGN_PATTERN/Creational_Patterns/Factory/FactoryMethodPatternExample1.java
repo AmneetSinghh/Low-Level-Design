@@ -2,7 +2,7 @@ package design_pattern.Creational_Patterns.Factory;
 // factory with no arguments.
 
 /*
-Factory Method is a creational design pattern
+Factory Method is a Creational design pattern
 that provides an interface for creating objects in a
 superclass, but allows subclasses to alter the type of
 objects that will be created.

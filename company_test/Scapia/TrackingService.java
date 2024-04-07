@@ -1,6 +1,5 @@
 package company_test.Scapia;
 
-import MachineCoding_HLD.CacheSystem.Cache.exceptions.NotFoundException;
 import company_test.Scapia.enums.TrackingStatus;
 import company_test.Scapia.model.DeliveryPartner;
 import lombok.Getter;

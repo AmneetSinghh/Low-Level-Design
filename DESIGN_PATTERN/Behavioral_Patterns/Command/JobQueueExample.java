@@ -81,6 +81,7 @@ class NetworkReadInsertOperationsCommand implements Task{
         networkApi.insertIntoNetworkApi();
     }
 }
+
 class DataBase{
     public void readFromDatabase(){
         System.out.println("Read from database");
