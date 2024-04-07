@@ -1,0 +1,210 @@
+{
+  "collection": {
+    "info": {
+      "_postman_id": "2c1449d1-4c5c-40b3-849f-dae77e836dce",
+      "name": "volt money",
+      "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+      "updatedAt": "2024-02-16T08:41:59.000Z",
+      "uid": "14202196-2c1449d1-4c5c-40b3-849f-dae77e836dce",
+      "createdAt": null,
+      "lastUpdatedBy": null
+    },
+    "item": [
+      {
+        "name": "available slots by operator",
+        "id": "48662a46-c66b-4ed6-b702-a83cf5f20f0d",
+        "protocolProfileBehavior": {
+          "disableBodyPruning": true
+        },
+        "request": {
+          "method": "GET",
+          "header": [],
+          "url": {
+            "raw": "localhost:8080/api/v1/appointment/available/slots/1",
+            "host": [
+              "localhost"
+            ],
+            "port": "8080",
+            "path": [
+              "api",
+              "v1",
+              "appointment",
+              "available",
+              "slots",
+              "1"
+            ]
+          }
+        },
+        "response": [],
+        "uid": "14202196-48662a46-c66b-4ed6-b702-a83cf5f20f0d"
+      },
+      {
+        "name": "booked slots by operator",
+        "id": "9dd8c0b2-e13b-4c75-8631-9c79f570de97",
+        "protocolProfileBehavior": {
+          "disableBodyPruning": true
+        },
+        "request": {
+          "method": "GET",
+          "header": [],
+          "url": {
+            "raw": "localhost:8080/api/v1/appointment/booked/1",
+            "host": [
+              "localhost"
+            ],
+            "port": "8080",
+            "path": [
+              "api",
+              "v1",
+              "appointment",
+              "booked",
+              "1"
+            ]
+          }
+        },
+        "response": [],
+        "uid": "14202196-9dd8c0b2-e13b-4c75-8631-9c79f570de97"
+      },
+      {
+        "name": "add dummy book appointemnt records",
+        "id": "99cbf6b0-3b17-443b-8549-d9978097af72",
+        "protocolProfileBehavior": {
+          "disableBodyPruning": true
+        },
+        "request": {
+          "method": "POST",
+          "header": [],
+          "body": {
+            "mode": "raw",
+            "raw": "{\n    \"operatorId\" : 1,\n    \"customerId\":1,\n    \"createdByOperatorId\" : 1\n    }",
+            "options": {
+              "raw": {
+                "language": "json"
+              }
+            }
+          },
+          "url": {
+            "raw": "localhost:8080/api/v1/appointment/sampleBooking",
+            "host": [
+              "localhost"
+            ],
+            "port": "8080",
+            "path": [
+              "api",
+              "v1",
+              "appointment",
+              "sampleBooking"
+            ]
+          }
+        },
+        "response": [],
+        "uid": "14202196-99cbf6b0-3b17-443b-8549-d9978097af72"
+      },
+      {
+        "name": "cancel appointment",
+        "id": "fc60bc23-52c2-46ae-a7cf-c1c95538d28c",
+        "protocolProfileBehavior": {
+          "disableBodyPruning": true
+        },
+        "request": {
+          "method": "POST",
+          "header": [],
+          "body": {
+            "mode": "raw",
+            "raw": "{\n    \"operatorId\" : 1,\n    \"customerId\":1,\n    \"createdByOperatorId\" : 1,\n    \"slot\":\"2022-02-30 06\",\n    \"appointmentId\":\"d7d93128-588e-4420-a123-c5216c34be1a\"\n}",
+            "options": {
+              "raw": {
+                "language": "json"
+              }
+            }
+          },
+          "url": {
+            "raw": "localhost:8080/api/v1/appointment/cancel",
+            "host": [
+              "localhost"
+            ],
+            "port": "8080",
+            "path": [
+              "api",
+              "v1",
+              "appointment",
+              "cancel"
+            ]
+          }
+        },
+        "response": [],
+        "uid": "14202196-fc60bc23-52c2-46ae-a7cf-c1c95538d28c"
+      },
+      {
+        "name": "book appointment",
+        "id": "8c7dfd0b-5432-4f79-88f3-b87302b8586b",
+        "protocolProfileBehavior": {
+          "disableBodyPruning": true
+        },
+        "request": {
+          "method": "POST",
+          "header": [],
+          "body": {
+            "mode": "raw",
+            "raw": "{\n    \"operatorId\" : 1,\n    \"customerId\":1,\n    \"createdByOperatorId\" : 1,\n    \"slot\":\"2022-02-30 06\"\n}",
+            "options": {
+              "raw": {
+                "language": "json"
+              }
+            }
+          },
+          "url": {
+            "raw": "localhost:8080/api/v1/appointment/book",
+            "host": [
+              "localhost"
+            ],
+            "port": "8080",
+            "path": [
+              "api",
+              "v1",
+              "appointment",
+              "book"
+            ]
+          }
+        },
+        "response": [],
+        "uid": "14202196-8c7dfd0b-5432-4f79-88f3-b87302b8586b"
+      },
+      {
+        "name": "reschedule appointment",
+        "id": "619db427-acb3-4653-a1dc-c40d6d1c367e",
+        "protocolProfileBehavior": {
+          "disableBodyPruning": true
+        },
+        "request": {
+          "method": "POST",
+          "header": [],
+          "body": {
+            "mode": "raw",
+            "raw": "{\n    \"operatorId\" : 1,\n    \"customerId\":1,\n    \"createdByOperatorId\" : 1,\n    \"slot\":\"2022-02-30 06\",\n    \"appointmentId\":\"d7d93128-588e-4420-a123-c5216c34be1a\"\n}",
+            "options": {
+              "raw": {
+                "language": "json"
+              }
+            }
+          },
+          "url": {
+            "raw": "localhost:8080/api/v1/appointment/reschedule",
+            "host": [
+              "localhost"
+            ],
+            "port": "8080",
+            "path": [
+              "api",
+              "v1",
+              "appointment",
+              "reschedule"
+            ]
+          }
+        },
+        "response": [],
+        "uid": "14202196-619db427-acb3-4653-a1dc-c40d6d1c367e"
+      }
+    ]
+  }
+}
