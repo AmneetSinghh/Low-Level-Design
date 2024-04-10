@@ -30,6 +30,6 @@ public class Ticket {
 
     String entryTime;
     Vehicle vehicle;
-    IParkingSlot parkingSlot;
+    IParkingSlot parkingSlot;// ParkingSlot parkingslot
 
 }
