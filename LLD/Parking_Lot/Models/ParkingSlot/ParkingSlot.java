@@ -11,7 +11,7 @@ abstract class ParkingSlot implements IParkingSlot{
 
 
     public void parkVehicle(Vehicle v){
-        this.vehicle = vehicle.
+        getVehicle().setType(v.getType());
         this.setEmpty(false);
     }
 
